@@ -1,6 +1,14 @@
 import Button from "../../components/Button";
 import DefaultLayout from "../../layout/DefaultLayout";
 import GameDetailCarousel from "../../components/GameDetailCarousel";
+import FirePng from "../../assets/fire.png"
+import Dia0Png from "../../assets/dia0.webp"
+import Dia1Png from "../../assets/dia1.webp"
+import Dia2Png from "../../assets/dia2.webp"
+import Dia3Png from "../../assets/dia3.webp"
+import Dia4Png from "../../assets/dia4.webp"
+// import Dia5Png from "../../assets/dia5.webp"
+import Dia6Png from "../../assets/dia6.webp"
 
 const GameDetailPage = () => {
   return (
@@ -12,7 +20,7 @@ const GameDetailPage = () => {
       <section className="py-5 bg-gray-50">
         <div className="max-w-6xl flex flex-col items-center mx-auto text-center">
           <h2 className="flex items-center text-xl font-semibold mb-3">
-            <img className="w-7 h-6 me-1" src={"/src/assets/fire.png"} alt="" />
+            <img className="w-7 h-6 me-1" src={FirePng} alt="" />
             Hot Products
           </h2>
           <div className="max-w-4xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-5 select-none">
@@ -35,7 +43,7 @@ const GameDetailPage = () => {
                       </span>
                     </div>
                     <img
-                      src={"/src/assets/dia0.webp"}
+                      src={Dia0Png}
                       alt="Hot Product 1"
                       className="object-cover rounded-xl mx-auto"
                     />
@@ -72,7 +80,7 @@ const GameDetailPage = () => {
                       </span>
                     </div>
                     <img
-                      src={"/src/assets/dia6.webp"}
+                      src={Dia6Png}
                       alt="Hot Product 1"
                       className="object-cover rounded-xl mx-auto"
                     />
@@ -109,7 +117,7 @@ const GameDetailPage = () => {
                       </span>
                     </div>
                     <img
-                      src={"/src/assets/dia1.webp"}
+                      src={Dia1Png}
                       alt="Hot Product 1"
                       className="object-cover rounded-xl mx-auto"
                     />
@@ -146,7 +154,7 @@ const GameDetailPage = () => {
                       </span>
                     </div>
                     <img
-                      src={"/src/assets/dia2.webp"}
+                      src={Dia2Png}
                       alt="Hot Product 1"
                       className="object-cover rounded-xl mx-auto"
                     />
@@ -183,7 +191,7 @@ const GameDetailPage = () => {
                       </span>
                     </div>
                     <img
-                      src={"/src/assets/dia3.webp"}
+                      src={Dia3Png}
                       alt="Hot Product 1"
                       className="object-cover rounded-xl mx-auto"
                     />
@@ -220,7 +228,7 @@ const GameDetailPage = () => {
                       </span>
                     </div>
                     <img
-                      src={"/src/assets/dia4.webp"}
+                      src={Dia4Png}
                       alt="Hot Product 1"
                       className="object-cover rounded-xl mx-auto"
                     />
@@ -270,7 +278,7 @@ const GameDetailPage = () => {
                       </span>
                     </div>
                     <img
-                      src={"/src/assets/dia0.webp"}
+                      src={Dia0Png}
                       alt="Hot Product 1"
                       className="object-cover rounded-xl mx-auto"
                     />
@@ -307,7 +315,7 @@ const GameDetailPage = () => {
                       </span>
                     </div>
                     <img
-                      src={"/src/assets/dia6.webp"}
+                      src={Dia6Png}
                       alt="Hot Product 1"
                       className="object-cover rounded-xl mx-auto"
                     />
@@ -344,7 +352,7 @@ const GameDetailPage = () => {
                       </span>
                     </div>
                     <img
-                      src={"/src/assets/dia1.webp"}
+                      src={Dia1Png}
                       alt="Hot Product 1"
                       className="object-cover rounded-xl mx-auto"
                     />
@@ -381,7 +389,7 @@ const GameDetailPage = () => {
                       </span>
                     </div>
                     <img
-                      src={"/src/assets/dia2.webp"}
+                      src={Dia2Png}
                       alt="Hot Product 1"
                       className="object-cover rounded-xl mx-auto"
                     />
@@ -418,7 +426,7 @@ const GameDetailPage = () => {
                       </span>
                     </div>
                     <img
-                      src={"/src/assets/dia3.webp"}
+                      src={Dia3Png}
                       alt="Hot Product 1"
                       className="object-cover rounded-xl mx-auto"
                     />
@@ -455,7 +463,7 @@ const GameDetailPage = () => {
                       </span>
                     </div>
                     <img
-                      src={"/src/assets/dia4.webp"}
+                      src={Dia4Png}
                       alt="Hot Product 1"
                       className="object-cover rounded-xl mx-auto"
                     />
