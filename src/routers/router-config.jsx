@@ -1,4 +1,5 @@
 import LoginPage from "../screens/auth/LoginPage";
+import GameDetailPage from "../screens/gamedetail/GameDetailPage";
 import HomePage from "../screens/home/HomePage";
 
 export const RouteConfig = [
@@ -10,5 +11,9 @@ export const RouteConfig = [
     {
         path: "/login",
         element: <LoginPage/>
+    },
+    {
+        path: "/game-detail",
+        element: <GameDetailPage/>
     },
 ];

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "../../components/Button";
 
 const Header = () => {
@@ -5,29 +6,31 @@ const Header = () => {
     <header className="bg-white text-gray-800 py-3">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-4">
         {/* Logo */}
-        <div className="text-2xl font-extrabold tracking-tight">
-          <span className="text-sky-500">ShopMate</span>
-        </div>
+        <Link to={"/"} className="text-2xl font-extrabold tracking-tight">
+          <span className="text-sky-500">PotanShop</span>
+        </Link>
 
         {/* Navigation */}
         <nav className="hidden md:flex space-x-6">
-          <a href="/" className="hover:text-sky-500 transition-all">
+          <Link to={"/"} className="hover:text-sky-500 transition-all">
             Home
-          </a>
-          <a href="/shop" className="hover:text-sky-500 transition-all">
+          </Link>
+          <Link to={"/"} className="hover:text-sky-500 transition-all">
             Shop
-          </a>
-          <a href="/about" className="hover:text-sky-500 transition-all">
+          </Link>
+          <Link to={"/"} className="hover:text-sky-500 transition-all">
             About
-          </a>
-          <a href="/contact" className="hover:text-sky-500 transition-all">
+          </Link>
+          <Link to={"/"} className="hover:text-sky-500 transition-all">
             Contact
-          </a>
-          <a href="/cart" className="hover:text-sky-500 transition-all">
+          </Link>
+          <Link to={"/"} className="hover:text-sky-500 transition-all">
             Cart
-          </a>
+          </Link>
           {/* Top Up Button */}
-          <Button className="w-[100px] h-[30px]" onClick={() => null}>Top Up</Button>
+          {/* <Button className="w-[100px] h-[30px]" onClick={() => null}>
+            Top Up
+          </Button> */}
         </nav>
 
         {/* Mobile Menu Icon */}
