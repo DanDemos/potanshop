@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
-import Header from './header/header';
+import Header from './header/Header.jsx';
 import Footer from './footer/Footer';
 import TopBar from './topbar/TopBar';
 import SnowflakesEffect from './effect/SnowflakesEffect';
