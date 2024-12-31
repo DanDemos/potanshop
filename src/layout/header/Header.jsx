@@ -15,16 +15,10 @@ const Header = () => {
             Home
           </Link>
           <Link to={"/"} className="hover:text-sky-500 transition-all">
-            Shop
-          </Link>
-          <Link to={"/"} className="hover:text-sky-500 transition-all">
             About
           </Link>
           <Link to={"/"} className="hover:text-sky-500 transition-all">
             Contact
-          </Link>
-          <Link to={"/"} className="hover:text-sky-500 transition-all">
-            Cart
           </Link>
           {/* Top Up Button */}
           {/* <Button className="w-[100px] h-[30px]" onClick={() => null}>
