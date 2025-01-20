@@ -5,7 +5,7 @@ import {
   FaViber,
 } from "react-icons/fa";
 
-const Footer = () => {
+const FooterMM = () => {
   return (
     <footer className="bg-gray-800 text-white py-12">
       <div className="max-w-6xl mx-auto px-6">
@@ -13,11 +13,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-12">
           {/* About Section */}
           <div className="col-span-1">
-            <h3 className="text-lg font-semibold mb-4">About PotanShop</h3>
+            <h3 className="text-lg font-semibold mb-4">PotanShop အကြောင်း</h3>
             <p className="text-sm text-gray-400">
-              PotanShop is your one-stop online store for in-game currency and
-              accessories. Enjoy fast and secure transactions, reliable customer
-              support, and a wide selection of games.
+              PotanShop သည် အွန်လိုင်း ဂိမ်းငွေပမာဏ နှင့် အသုံးပြုမှုဆိုင်ရာ
+              ပစ္စည်းများအတွက် တစ်နေရာတည်း ဝယ်ယူနိုင်သော ဆိုင်တစ်ခုဖြစ်သည်။
+              အမြန်နှင့် လုံခြုံသော လုပ်ငန်းစဉ်များ၊ ယုံကြည်စိတ်ချရသော
+              ဖောက်သည်ကူညီမှုနှင့် ဂိမ်းများစွာ ရွေးချယ်နိုင်ပါသည်။
             </p>
           </div>
 
@@ -25,7 +26,9 @@ const Footer = () => {
             {/* Social Media Links */}
             <div className="order-2 sm:order-1">
               <div className="text-center">
-                <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
+                <h3 className="text-lg font-semibold mb-4">
+                  ကျွန်ုပ်တို့ကို follow ရန်
+                </h3>
                 <div className="flex justify-center space-x-6">
                   <a
                     href="https://facebook.com"
@@ -57,11 +60,11 @@ const Footer = () => {
 
             {/* Quick Links */}
             <div className="order-1 sm:order-2 ps-0 sm:ps-20">
-              <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+              <h3 className="text-lg font-semibold mb-4">အမြန်လင့်ခ်များ</h3>
               <ul className="text-sm text-gray-400 space-y-2">
                 <li>
                   <a href="/privacy-policy" className="hover:text-gray-300">
-                    Privacy Policy
+                    ပုဂ္ဂိုလ်ရေးအချက်အလက် မူဝါဒ
                   </a>
                 </li>
                 <li>
@@ -69,12 +72,12 @@ const Footer = () => {
                     href="/terms-and-conditions"
                     className="hover:text-gray-300"
                   >
-                    Terms and Conditions
+                    အခြေအနေများနှင့် ရည်ညွှန်းချက်များ
                   </a>
                 </li>
                 <li>
                   <a href="/contact" className="hover:text-gray-300">
-                    Contact Us
+                    ကျွန်ုပ်တို့နှင့် ဆက်သွယ်ရန်
                   </a>
                 </li>
               </ul>
@@ -83,15 +86,15 @@ const Footer = () => {
 
           {/* Newsletter Signup */}
           {/* <div>
-            <h3 className="text-lg font-semibold mb-4">Subscribe to Our Newsletter</h3>
-            <p className="text-sm text-gray-400 mb-4">Stay updated with the latest products and promotions. Sign up for our newsletter!</p>
+            <h3 className="text-lg font-semibold mb-4">ကျွန်ုပ်တို့၏ နောက်ဆုံးပေါ်အသိပေးစာအတွက် စာရင်းသွင်းပါ</h3>
+            <p className="text-sm text-gray-400 mb-4">နောက်ဆုံးထွက်ပစ္စည်းများနှင့် ပရိုမိုးရှင်းများအကြောင်း အမြဲအသိပေးအပ်ပါမည်။ ကျွန်ုပ်တို့၏ အသိပေးစာအတွက် စာရင်းသွင်းပါ!</p>
             <input
               type="email"
-              placeholder="Enter your email"
+              placeholder="သင့်အီးမေးလ် လိပ်စာကို ရိုက်ထည့်ပါ"
               className="bg-gray-800 text-white px-4 py-2 w-full rounded-lg border border-gray-700 focus:outline-none focus:border-sky-500"
             />
             <button className="w-full mt-4 py-2 px-4 bg-sky-600 text-white rounded-lg hover:bg-sky-700">
-              Subscribe
+              စာရင်းသွင်းရန်
             </button>
           </div> */}
         </div>
@@ -105,4 +108,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default FooterMM;

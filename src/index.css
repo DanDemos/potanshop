@@ -87,7 +87,7 @@ html, body{
 }
 
 .slick-arrow{
-  z-index: 999;
+  z-index: 2;
   width: 30px;
   height: 30px;
 }

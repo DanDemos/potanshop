@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import DiamondIcon from "../../assets/DiamondIcon.png";
 import { useState } from "react";
-import { languageSlice } from "../../helper/customSlice";
-import { dispatchStore } from "../../lib/dispatchStore";
+import { languageSlice } from "../../helper/customSlice.js";
+import { dispatchStore } from "../../lib/dispatchStore.js";
 import { useSelector } from "react-redux";
 
-const Header = () => {
+const HeaderMM = () => {
   const language = useSelector((state) => state?.languageSlice);
 
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -38,13 +38,13 @@ const Header = () => {
         {/* Navigation */}
         <nav className="hidden sm:flex space-x-6">
           <Link to={"/"} className="hover:text-sky-500 transition-all">
-            Home
+            ပင်မစာမျက်နှာ
           </Link>
           <Link to={"/"} className="hover:text-sky-500 transition-all">
-            About
+            ကျွန်ုပ်တို့အကြောင်း
           </Link>
           <Link to={"/"} className="hover:text-sky-500 transition-all">
-            Contact
+            ဆက်သွယ်ရန်
           </Link>
 
           {/* Language Dropdown */}
@@ -56,8 +56,8 @@ const Header = () => {
               <img
                 src={
                   language == "en"
-                    ? "https://dandemos.github.io/image-hosting-repo/united-kingdom.png"
-                    : "https://dandemos.github.io/image-hosting-repo/myanmar.png"
+                    ? "https://japanheartmyanmar.org/imgs/united-kingdom.png"
+                    : "https://japanheartmyanmar.org/imgs/myanmar.png"
                 }
                 className="w-6 h-6"
               />
@@ -70,7 +70,7 @@ const Header = () => {
                   className="w-full flex justify-center items-center py-1 hover:bg-sky-200"
                 >
                   <img
-                    src="https://dandemos.github.io/image-hosting-repo/united-kingdom.png"
+                    src="https://japanheartmyanmar.org/imgs/united-kingdom.png"
                     alt="en"
                     className="w-6 h-6"
                   />
@@ -80,7 +80,7 @@ const Header = () => {
                   className="w-full flex justify-center items-center py-1 hover:bg-sky-200"
                 >
                   <img
-                    src="https://dandemos.github.io/image-hosting-repo/myanmar.png"
+                    src="https://japanheartmyanmar.org/imgs/myanmar.png"
                     alt="mm"
                     className="w-6 h-6"
                   />
@@ -148,7 +148,7 @@ const Header = () => {
               className="w-16 h-16 bg-white p-2 shadow-md"
             />
             <h2 className="text-lg font-semibold">
-              Welcome to PotanShop
+              ပိုတန်ဆိုင်ကိုကြိုဆိုပါတယ်
             </h2>
             <nav className="w-full space-y-4 text-center">
               <Link
@@ -156,21 +156,21 @@ const Header = () => {
                 onClick={toggleSidebar}
                 className="block py-2 px-4 bg-white text-sky-500 rounded-lg hover:bg-opacity-90 transition-all"
               >
-                Home
+                ပင်မစာမျက်နှာ
               </Link>
               <Link
                 to={"/"}
                 onClick={toggleSidebar}
                 className="block py-2 px-4 bg-white text-sky-500 rounded-lg hover:bg-opacity-90 transition-all"
               >
-                About
+                အကြောင်း
               </Link>
               <Link
                 to={"/"}
                 onClick={toggleSidebar}
                 className="block py-2 px-4 bg-white text-sky-500 rounded-lg hover:bg-opacity-90 transition-all"
               >
-                Contact
+                ဆက်သွယ်ရန်
               </Link>
             </nav>
           </div>
@@ -188,4 +188,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HeaderMM;

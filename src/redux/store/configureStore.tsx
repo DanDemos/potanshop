@@ -7,8 +7,12 @@ import { slice, loadingSlice, AccessTokenSlice } from '../reducers/reducer';
 import CustomSlice  from '../../helper/customSlice';
 import whitelist_arr from '../../helper/persist_whitelist'
 import { FLUSH, REHYDRATE,  PAUSE,  PERSIST, PURGE, REGISTER } from 'redux-persist'
-// Combine the reducers from the 'slice' object
 
+type DynamicSlices = {
+  [K in keyof typeof CustomSlice]: ReturnType<typeof CustomSlice[K]['reducer']>;
+};
+
+// Combine the reducers from the 'slice' object
 const obj = {
   [AccessTokenSlice.name]: AccessTokenSlice.reducer,
   ...Object.fromEntries(Object.entries(slice).map(([key, { reducer }]) => [key, reducer])),
@@ -43,6 +47,11 @@ export const store = configureStore({
       },
     }).concat(thunk), // Apply Redux thunk middleware
 });
+
+export type RootState = DynamicSlices & {
+  loading: ReturnType<typeof loadingSlice.reducer>;
+  AccessToken: ReturnType<typeof AccessTokenSlice.reducer>;
+};
 
 // Create the persisted store
 export const persist = persistStore(store);

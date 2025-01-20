@@ -1,29 +1,29 @@
 import { toast } from "react-toastify";
-import BannerCarousel from "../../components/BannerCarousel";
 import Button from "../../components/Button";
 import { Link } from "react-router-dom";
-import FirePng from "../../assets/fire.png"
-import Dia0Png from "../../assets/dia0.webp"
-import Dia1Png from "../../assets/dia1.webp"
-import Dia2Png from "../../assets/dia2.webp"
-import Dia3Png from "../../assets/dia3.webp"
-import Dia4Png from "../../assets/dia4.webp"
+import FirePng from "../../assets/fire.png";
+import Dia0Png from "../../assets/dia0.webp";
+import Dia1Png from "../../assets/dia1.webp";
+import Dia2Png from "../../assets/dia2.webp";
+import Dia3Png from "../../assets/dia3.webp";
+import Dia4Png from "../../assets/dia4.webp";
 // import Dia5Png from "../../assets/dia5.webp"
-import Dia6Png from "../../assets/dia6.webp"
+import Dia6Png from "../../assets/dia6.webp";
 import DefaultLayout from "../../layout/DefaultLayout";
+import BannerCarouselHandler from "../../components/BannerCarouselHandler";
 
-const HomePage = () => {
+const HomePageMM = () => {
   return (
     <DefaultLayout>
       {/* Hero Section */}
-      <BannerCarousel />
+      <BannerCarouselHandler />
 
       {/* Hot Games Section */}
       <section className="px-3 py-5 sm:px-0 bg-gray-50">
         <div className="max-w-6xl flex flex-col items-center mx-auto text-center">
           <h2 className="flex items-center text-xl font-semibold mb-3">
             <img className="w-7 h-6 me-1" src={FirePng} alt="" />
-            Hot Games
+            လူကြိုက်များသောဂိမ်းများ
           </h2>
           <div className="max-w-4xl grid grid-cols-3 sm:grid-cols-5 sm:gap-5 gap-3 select-none">
             {/* Hot Game Item */}
@@ -56,7 +56,7 @@ const HomePage = () => {
                       <h3 className="font-semibold text-sm">Mobile Legends</h3>
                     </div>
                     <Button className="group w-full h-[40px] mx-auto">
-                      Top Up
+                      ငွေဖြည့်မည်
                     </Button>
                   </Link>
                 );
@@ -95,14 +95,14 @@ const HomePage = () => {
                         toast.warn(
                           <div className="flex flex-col gap-0 ms-2">
                             <h1 className="text-sm font-semibold">
-                              Coming Soon
+                              မကြာမီလာမည်
                             </h1>
-                            <p className="text-xs">Under construction</p>
+                            <p className="text-xs">တည်ဆောက်ဆဲ</p>
                           </div>
                         )
                       }
                     >
-                      Top Up
+                      ငွေဖြည့်မည်
                     </Button>
                   </Link>
                 );
@@ -141,14 +141,14 @@ const HomePage = () => {
                         toast.warn(
                           <div className="flex flex-col gap-0 ms-2">
                             <h1 className="text-sm font-semibold">
-                              Coming Soon
+                              မကြာမီလာမည်
                             </h1>
-                            <p className="text-xs">Under construction</p>
+                            <p className="text-xs">တည်ဆောက်ဆဲ</p>
                           </div>
                         )
                       }
                     >
-                      Top Up
+                      ငွေဖြည့်မည်
                     </Button>
                   </Link>
                 );
@@ -179,7 +179,9 @@ const HomePage = () => {
                       className="w-full rounded-t-xl object-cover mx-auto"
                     />
                     <div className="my-2">
-                      <h3 className="font-semibold text-sm">League of Legend</h3>
+                      <h3 className="font-semibold text-sm">
+                        League of Legend
+                      </h3>
                     </div>
                     <Button
                       className="group w-full h-[40px] mx-auto"
@@ -187,14 +189,14 @@ const HomePage = () => {
                         toast.warn(
                           <div className="flex flex-col gap-0 ms-2">
                             <h1 className="text-sm font-semibold">
-                              Coming Soon
+                              မကြာမီလာမည်
                             </h1>
-                            <p className="text-xs">Under construction</p>
+                            <p className="text-xs">တည်ဆောက်ဆဲ</p>
                           </div>
                         )
                       }
                     >
-                      Top Up
+                      ငွေဖြည့်မည်
                     </Button>
                   </Link>
                 );
@@ -233,14 +235,14 @@ const HomePage = () => {
                         toast.warn(
                           <div className="flex flex-col gap-0 ms-2">
                             <h1 className="text-sm font-semibold">
-                              Coming Soon
+                              မကြာမီလာမည်
                             </h1>
-                            <p className="text-xs">Under construction</p>
+                            <p className="text-xs">တည်ဆောက်ဆဲ</p>
                           </div>
                         )
                       }
                     >
-                      Top Up
+                      ငွေဖြည့်မည်
                     </Button>
                   </Link>
                 );
@@ -254,7 +256,7 @@ const HomePage = () => {
         <div className="max-w-6xl flex flex-col items-center mx-auto text-center">
           <h2 className="flex items-center text-xl font-semibold mb-3">
             <img className="w-7 h-6 me-1" src={FirePng} alt="" />
-            Hot Products
+            အရောင်းရဆုံးပစ္စည်းများ
           </h2>
           <div className="max-w-4xl grid grid-cols-3 sm:grid-cols-6 sm:gap-5 gap-2 select-none">
             {/* Hot Product Item */}
@@ -290,7 +292,7 @@ const HomePage = () => {
                       className="group w-full h-[30px] mx-auto"
                       onClick={() => null}
                     >
-                      Buy Now
+                      ဝယ်မည်
                     </Button>
                   </div>
                 );
@@ -327,7 +329,7 @@ const HomePage = () => {
                       className="group w-full h-[30px] mx-auto"
                       onClick={() => null}
                     >
-                      Buy Now
+                      ဝယ်မည်
                     </Button>
                   </div>
                 );
@@ -364,7 +366,7 @@ const HomePage = () => {
                       className="group w-full h-[30px] mx-auto"
                       onClick={() => null}
                     >
-                      Buy Now
+                      ဝယ်မည်
                     </Button>
                   </div>
                 );
@@ -401,7 +403,7 @@ const HomePage = () => {
                       className="group w-full h-[30px] mx-auto"
                       onClick={() => null}
                     >
-                      Buy Now
+                      ဝယ်မည်
                     </Button>
                   </div>
                 );
@@ -438,7 +440,7 @@ const HomePage = () => {
                       className="group w-full h-[30px] mx-auto"
                       onClick={() => null}
                     >
-                      Buy Now
+                      ဝယ်မည်
                     </Button>
                   </div>
                 );
@@ -475,7 +477,7 @@ const HomePage = () => {
                       className="group w-full h-[30px] mx-auto"
                       onClick={() => null}
                     >
-                      Buy Now
+                      ဝယ်မည်
                     </Button>
                   </div>
                 );
@@ -489,8 +491,8 @@ const HomePage = () => {
         <div className="max-w-6xl mx-auto text-center">
           <div className="flex justify-between">
             <h2 className="text-2xl font-bold mb-3">Game List</h2>
-            <Button className="w-[110px] h-[33px]" onClick={() => null}>
-              See All
+            <Button className="w-[130px] h-[33px]" onClick={() => null}>
+              အားလုံးကြည့်မည်
             </Button>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 select-none">
@@ -519,19 +521,28 @@ const HomePage = () => {
       {/* Benefits Section */}
       <section className="bg-gray-100 px-3 py-16 sm:px-0">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-10">Why Shop With Us?</h2>
+          <h2 className="text-3xl font-bold mb-10">
+            ကျွန်ုပ်တို့နှင့်အတူ ဈေးဝယ်ရခြင်း၏ အကျိုးကျေးဇူးများ
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-12">
             <div className="text-left">
-              <h3 className="text-xl font-semibold mb-4">Free Shipping</h3>
-              <p>On all orders over $50.</p>
+              <h3 className="text-xl font-semibold mb-4">မှာယူ $50 အထက်</h3>
+              <p>အခမဲ့ ပို့ဆောင်မှု</p>
             </div>
             <div className="text-left">
-              <h3 className="text-xl font-semibold mb-4">Quality Guarantee</h3>
-              <p>We ensure high-quality products for every customer.</p>
+              <h3 className="text-xl font-semibold mb-4">
+                အရည်အသွေး အာမခံချက်
+              </h3>
+              <p>
+                ကျွန်ုပ်တို့သည် ဖောက်သည်တိုင်းအတွက် အရည်အသွေးမြင့်
+                ကုန်ပစ္စည်းများကို အာမခံပါသည်။
+              </p>
             </div>
             <div className="text-left">
-              <h3 className="text-xl font-semibold mb-4">Customer Support</h3>
-              <p>24/7 support for all your shopping needs.</p>
+              <h3 className="text-xl font-semibold mb-4">
+                ဖောက်သည် ထောက်ခံမှု
+              </h3>
+              <p>သင့်၏ ဈေးဝယ်လိုအပ်ချက်များအတွက် 24/7 ထောက်ခံမှု။</p>
             </div>
           </div>
         </div>
@@ -540,4 +551,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default HomePageMM;

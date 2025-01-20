@@ -1,5 +1,4 @@
 import Button from "../../components/Button";
-import DefaultLayout from "../../layout/DefaultLayout";
 import GameDetailCarousel from "../../components/GameDetailCarousel";
 import FirePng from "../../assets/fire.png"
 import Dia0Png from "../../assets/dia0.webp"
@@ -9,6 +8,7 @@ import Dia3Png from "../../assets/dia3.webp"
 import Dia4Png from "../../assets/dia4.webp"
 // import Dia5Png from "../../assets/dia5.webp"
 import Dia6Png from "../../assets/dia6.webp"
+import DefaultLayout from "../../layout/DefaultLayout";
 
 const GameDetailPage = () => {
   return (

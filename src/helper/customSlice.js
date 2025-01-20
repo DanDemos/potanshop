@@ -3,16 +3,17 @@ import { createSlice } from '@reduxjs/toolkit';
 const INITIAL_STATE = {
 
 }
-export const yourSlice = createSlice({
-  name: 'yourSlice',
-  initialState: INITIAL_STATE,
+
+export const languageSlice = createSlice({
+  name: 'languageSlice',
+  initialState: "en",
   reducers: {
-    setLoading: (state, action) => {
-      return state
+    setLanguage: (state, action) => {
+      return action.payload
     },
   },
 });
 
 export default {
-  yourSlice,
+  languageSlice,
 }
