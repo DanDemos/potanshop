@@ -25,7 +25,7 @@ const HeaderMM = () => {
   };
 
   return (
-    <header className="z-[2] fixed w-full bg-white text-gray-800 py-3">
+    <header className="z-[3] fixed w-full bg-white text-gray-800 py-3">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-4">
         {/* Logo */}
         <Link to={"/"} className="text-2xl font-extrabold tracking-tight">
@@ -117,7 +117,7 @@ const HeaderMM = () => {
         <div
           className={`fixed top-0 right-0 h-full w-72 bg-gradient-to-b from-sky-500 to-sky-300 text-white shadow-xl transform ${
             isSidebarOpen ? "translate-x-0" : "translate-x-full"
-          } transition-transform duration-300 ease-in-out z-[3]`}
+          } transition-transform duration-300 ease-in-out z-[4]`}
         >
           {/* Close Button */}
           <button
@@ -199,7 +199,7 @@ const HeaderMM = () => {
                   />
                 </button>
               </div>
-              
+
             </nav>
           </div>
         </div>
@@ -208,7 +208,7 @@ const HeaderMM = () => {
         {isSidebarOpen && (
           <div
             onClick={toggleSidebar}
-            className="fixed inset-0 bg-black bg-opacity-50 z-[2]"
+            className="fixed inset-0 bg-black bg-opacity-50 z-[3]"
           />
         )}
       </div>
