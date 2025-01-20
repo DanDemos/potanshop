@@ -17,13 +17,13 @@ const GameDetailPage = () => {
       <GameDetailCarousel />
 
       {/* Hot Products Section */}
-      <section className="py-5 bg-gray-50">
+      <section className="px-3 py-5 sm:px-0 bg-gray-50">
         <div className="max-w-6xl flex flex-col items-center mx-auto text-center">
           <h2 className="flex items-center text-xl font-semibold mb-3">
             <img className="w-7 h-6 me-1" src={FirePng} alt="" />
             Hot Products
           </h2>
-          <div className="max-w-4xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-5 select-none">
+          <div className="max-w-4xl grid grid-cols-3 sm:grid-cols-6 sm:gap-5 gap-2 select-none">
             {/* Hot Product Item */}
             {Array(1)
               .fill()
@@ -54,7 +54,7 @@ const GameDetailPage = () => {
                       <p className="text-gray-600">$8.99</p>
                     </div>
                     <Button
-                      className="group w-[100px] h-[30px]"
+                      className="group w-full h-[30px] mx-auto"
                       onClick={() => null}
                     >
                       Buy Now
@@ -91,7 +91,7 @@ const GameDetailPage = () => {
                       <p className="text-gray-600">$1.89</p>
                     </div>
                     <Button
-                      className="group w-[100px] h-[30px]"
+                      className="group w-full h-[30px] mx-auto"
                       onClick={() => null}
                     >
                       Buy Now
@@ -128,7 +128,7 @@ const GameDetailPage = () => {
                       <p className="text-gray-600">$0.89</p>
                     </div>
                     <Button
-                      className="group w-[100px] h-[30px]"
+                      className="group w-full h-[30px] mx-auto"
                       onClick={() => null}
                     >
                       Buy Now
@@ -165,7 +165,7 @@ const GameDetailPage = () => {
                       <p className="text-gray-600">$1.77</p>
                     </div>
                     <Button
-                      className="group w-[100px] h-[30px]"
+                      className="group w-full h-[30px] mx-auto"
                       onClick={() => null}
                     >
                       Buy Now
@@ -202,7 +202,7 @@ const GameDetailPage = () => {
                       <p className="text-gray-600">$2.65</p>
                     </div>
                     <Button
-                      className="group w-[100px] h-[30px]"
+                      className="group w-full h-[30px] mx-auto"
                       onClick={() => null}
                     >
                       Buy Now
@@ -239,7 +239,7 @@ const GameDetailPage = () => {
                       <p className="text-gray-600">$3.54</p>
                     </div>
                     <Button
-                      className="group w-[100px] h-[30px]"
+                      className="group w-full h-[30px] mx-auto"
                       onClick={() => null}
                     >
                       Buy Now
@@ -252,13 +252,13 @@ const GameDetailPage = () => {
       </section>
 
       {/* Hot Products Section */}
-      <section className="py-5 bg-gray-50">
+      <section className="px-3 py-5 sm:px-0 bg-gray-50">
         <div className="max-w-6xl flex flex-col items-center mx-auto text-center">
           <h2 className="flex items-center text-xl font-semibold mb-3">
-            <img className="w-7 h-6 me-1" src={"/src/assets/fire.png"} alt="" />
-            Discounted Products
+            <img className="w-7 h-6 me-1" src={FirePng} alt="" />
+            Hot Products
           </h2>
-          <div className="max-w-4xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-5 select-none">
+          <div className="max-w-4xl grid grid-cols-3 sm:grid-cols-6 sm:gap-5 gap-2 select-none">
             {/* Hot Product Item */}
             {Array(1)
               .fill()
@@ -274,7 +274,7 @@ const GameDetailPage = () => {
                       before:absolute before:left-0 before:top-full before:z-[-1] before:content-[''] before:block before:border-l-[3px] before:border-l-red-500 before:border-r-[3px] before:border-r-transparent before:border-b-[3px] before:border-b-transparent before:border-t-[3px] before:border-t-red-500 
                       after:absolute after:top-full after:right-0 after:z-[-1] after:content-[''] after:border-l-[0.188rem] after:border-l-transparent after:border-r-[0.188rem] after:border-r-red-500 after:border-t-[0.188rem] after:border-t-red-500 after:border-b-[0.188rem] after:border-b-transparent"
                       >
-                        20%
+                        Hot
                       </span>
                     </div>
                     <img
@@ -289,7 +289,7 @@ const GameDetailPage = () => {
                       <p className="text-gray-600">$8.99</p>
                     </div>
                     <Button
-                      className="group w-[100px] h-[30px]"
+                      className="group w-full h-[30px] mx-auto"
                       onClick={() => null}
                     >
                       Buy Now
@@ -311,7 +311,7 @@ const GameDetailPage = () => {
                       before:absolute before:left-0 before:top-full before:z-[-1] before:content-[''] before:block before:border-l-[3px] before:border-l-red-500 before:border-r-[3px] before:border-r-transparent before:border-b-[3px] before:border-b-transparent before:border-t-[3px] before:border-t-red-500 
                       after:absolute after:top-full after:right-0 after:z-[-1] after:content-[''] after:border-l-[0.188rem] after:border-l-transparent after:border-r-[0.188rem] after:border-r-red-500 after:border-t-[0.188rem] after:border-t-red-500 after:border-b-[0.188rem] after:border-b-transparent"
                       >
-                        20%
+                        Hot
                       </span>
                     </div>
                     <img
@@ -326,7 +326,7 @@ const GameDetailPage = () => {
                       <p className="text-gray-600">$1.89</p>
                     </div>
                     <Button
-                      className="group w-[100px] h-[30px]"
+                      className="group w-full h-[30px] mx-auto"
                       onClick={() => null}
                     >
                       Buy Now
@@ -348,7 +348,7 @@ const GameDetailPage = () => {
                       before:absolute before:left-0 before:top-full before:z-[-1] before:content-[''] before:block before:border-l-[3px] before:border-l-red-500 before:border-r-[3px] before:border-r-transparent before:border-b-[3px] before:border-b-transparent before:border-t-[3px] before:border-t-red-500 
                       after:absolute after:top-full after:right-0 after:z-[-1] after:content-[''] after:border-l-[0.188rem] after:border-l-transparent after:border-r-[0.188rem] after:border-r-red-500 after:border-t-[0.188rem] after:border-t-red-500 after:border-b-[0.188rem] after:border-b-transparent"
                       >
-                        20%
+                        Hot
                       </span>
                     </div>
                     <img
@@ -363,7 +363,7 @@ const GameDetailPage = () => {
                       <p className="text-gray-600">$0.89</p>
                     </div>
                     <Button
-                      className="group w-[100px] h-[30px]"
+                      className="group w-full h-[30px] mx-auto"
                       onClick={() => null}
                     >
                       Buy Now
@@ -385,7 +385,7 @@ const GameDetailPage = () => {
                       before:absolute before:left-0 before:top-full before:z-[-1] before:content-[''] before:block before:border-l-[3px] before:border-l-red-500 before:border-r-[3px] before:border-r-transparent before:border-b-[3px] before:border-b-transparent before:border-t-[3px] before:border-t-red-500 
                       after:absolute after:top-full after:right-0 after:z-[-1] after:content-[''] after:border-l-[0.188rem] after:border-l-transparent after:border-r-[0.188rem] after:border-r-red-500 after:border-t-[0.188rem] after:border-t-red-500 after:border-b-[0.188rem] after:border-b-transparent"
                       >
-                        20%
+                        Hot
                       </span>
                     </div>
                     <img
@@ -400,7 +400,7 @@ const GameDetailPage = () => {
                       <p className="text-gray-600">$1.77</p>
                     </div>
                     <Button
-                      className="group w-[100px] h-[30px]"
+                      className="group w-full h-[30px] mx-auto"
                       onClick={() => null}
                     >
                       Buy Now
@@ -422,7 +422,7 @@ const GameDetailPage = () => {
                       before:absolute before:left-0 before:top-full before:z-[-1] before:content-[''] before:block before:border-l-[3px] before:border-l-red-500 before:border-r-[3px] before:border-r-transparent before:border-b-[3px] before:border-b-transparent before:border-t-[3px] before:border-t-red-500 
                       after:absolute after:top-full after:right-0 after:z-[-1] after:content-[''] after:border-l-[0.188rem] after:border-l-transparent after:border-r-[0.188rem] after:border-r-red-500 after:border-t-[0.188rem] after:border-t-red-500 after:border-b-[0.188rem] after:border-b-transparent"
                       >
-                        20%
+                        Hot
                       </span>
                     </div>
                     <img
@@ -437,7 +437,7 @@ const GameDetailPage = () => {
                       <p className="text-gray-600">$2.65</p>
                     </div>
                     <Button
-                      className="group w-[100px] h-[30px]"
+                      className="group w-full h-[30px] mx-auto"
                       onClick={() => null}
                     >
                       Buy Now
@@ -459,7 +459,7 @@ const GameDetailPage = () => {
                       before:absolute before:left-0 before:top-full before:z-[-1] before:content-[''] before:block before:border-l-[3px] before:border-l-red-500 before:border-r-[3px] before:border-r-transparent before:border-b-[3px] before:border-b-transparent before:border-t-[3px] before:border-t-red-500 
                       after:absolute after:top-full after:right-0 after:z-[-1] after:content-[''] after:border-l-[0.188rem] after:border-l-transparent after:border-r-[0.188rem] after:border-r-red-500 after:border-t-[0.188rem] after:border-t-red-500 after:border-b-[0.188rem] after:border-b-transparent"
                       >
-                        15%
+                        Hot
                       </span>
                     </div>
                     <img
@@ -474,7 +474,7 @@ const GameDetailPage = () => {
                       <p className="text-gray-600">$3.54</p>
                     </div>
                     <Button
-                      className="group w-[100px] h-[30px]"
+                      className="group w-full h-[30px] mx-auto"
                       onClick={() => null}
                     >
                       Buy Now
@@ -487,10 +487,10 @@ const GameDetailPage = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="bg-gray-100 py-16">
+      <section className="bg-gray-100 px-3 py-16 sm:px-0">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-10">Why Shop With Us?</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-12">
             <div className="text-left">
               <h3 className="text-xl font-semibold mb-4">Free Shipping</h3>
               <p>On all orders over $50.</p>

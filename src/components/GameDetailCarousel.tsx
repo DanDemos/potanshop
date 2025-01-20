@@ -15,8 +15,8 @@ const GameDetailCarousel: React.FC = () => {
 
   return (
     <div className="flex justify-center w-full ">
-      <div className="relative flex max-w-6xl h-auto bg-gray-200">
-        <div className="w-2/3 h-full">
+      <div className="relative flex max-w-full sm:max-w-[80%] h-auto bg-gray-200">
+        <div className="w-full sm:w-2/3 h-full">
           {" "}
           {/* Carousel takes 2/3 of the screen width */}
           <Slider {...settings}>
@@ -67,7 +67,7 @@ const GameDetailCarousel: React.FC = () => {
           </Slider>
         </div>
 
-        <div className="w-1/3 px-8 pt-7">
+        <div className="hidden sm:block sm:w-1/3 px-8 pt-7">
           {" "}
           {/* Right side for the paragraph */}
           <h3 className="text-md font-bold mb-2">About this game</h3>

@@ -1,16 +1,19 @@
 import { Link } from "react-router-dom";
-
+import DiamondIcon from "../../assets/DiamondIcon.png";
 const Header = () => {
   return (
     <header className="bg-white text-gray-800 py-3">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-4">
         {/* Logo */}
         <Link to={"/"} className="text-2xl font-extrabold tracking-tight">
-          <span className="text-sky-500">PotanShop</span>
+          <div className="flex items-center gap-1">
+            <img className="w-[35px] h-[35px]" src={DiamondIcon} alt="" />
+            <span className="text-sky-500">PotanShop</span>
+          </div>
         </Link>
 
         {/* Navigation */}
-        <nav className="hidden md:flex space-x-6">
+        <nav className="hidden sm:flex space-x-6">
           <Link to={"/"} className="hover:text-sky-500 transition-all">
             Home
           </Link>
@@ -27,7 +30,7 @@ const Header = () => {
         </nav>
 
         {/* Mobile Menu Icon */}
-        <div className="md:hidden">
+        <div className="sm:hidden">
           <button className="text-gray-800 focus:outline-none">
             <svg
               className="w-6 h-6"
