@@ -19,7 +19,7 @@ const DefaultLayout = ({ children }) => {
       {language == "en" ? <Header /> : <HeaderMM />}
 
       {/* Main Content Section */}
-      <main className="">{children}</main>
+      <main className="mt-[59px]">{children}</main>
 
       {/* Footer */}
       {language == "en" ? <Footer /> : <FooterMM />}

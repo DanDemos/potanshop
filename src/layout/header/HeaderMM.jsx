@@ -25,7 +25,7 @@ const HeaderMM = () => {
   };
 
   return (
-    <header className="bg-white text-gray-800 py-3">
+    <header className="z-[2] fixed w-full bg-white text-gray-800 py-3">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-4">
         {/* Logo */}
         <Link to={"/"} className="text-2xl font-extrabold tracking-tight">
@@ -145,33 +145,61 @@ const HeaderMM = () => {
             <img
               src={DiamondIcon}
               alt="Logo"
-              className="w-16 h-16 bg-white p-2 shadow-md"
+              className="w-16 h-16 bg-white p-2 shadow-md rounded-tl-xl rounded-br-xl"
             />
             <h2 className="text-lg font-semibold">
               ပိုတန်ဆိုင်ကိုကြိုဆိုပါတယ်
             </h2>
-            <nav className="w-full space-y-4 text-center">
+            <nav className="flex flex-col justify-center items-center w-full space-y-4 text-center">
               <Link
                 to={"/"}
                 onClick={toggleSidebar}
-                className="block py-2 px-4 bg-white text-sky-500 rounded-lg hover:bg-opacity-90 transition-all"
+                className="block w-[70%] py-2 px-4 bg-white text-sky-500 rounded-lg hover:bg-opacity-90 transition-all"
               >
                 ပင်မစာမျက်နှာ
               </Link>
               <Link
                 to={"/"}
                 onClick={toggleSidebar}
-                className="block py-2 px-4 bg-white text-sky-500 rounded-lg hover:bg-opacity-90 transition-all"
+                className="block w-[70%] py-2 px-4 bg-white text-sky-500 rounded-lg hover:bg-opacity-90 transition-all"
               >
                 အကြောင်း
               </Link>
               <Link
                 to={"/"}
                 onClick={toggleSidebar}
-                className="block py-2 px-4 bg-white text-sky-500 rounded-lg hover:bg-opacity-90 transition-all"
+                className="block w-[70%] py-2 px-4 bg-white text-sky-500 rounded-lg hover:bg-opacity-90 transition-all"
               >
                 ဆက်သွယ်ရန်
               </Link>
+
+              <div className="flex items-center gap-4">
+                <button
+                  onClick={() => handlelanguageSelect("en")}
+                  className={`w-full flex justify-center items-center py-1 ${
+                    language == "mm" && "opacity-50"
+                  }`}
+                >
+                  <img
+                    src="https://dandemos.github.io/image-hosting-repo/united-kingdom.png"
+                    alt="en"
+                    className="w-6 h-6"
+                  />
+                </button>
+                <button
+                  onClick={() => handlelanguageSelect("mm")}
+                  className={`w-full flex justify-center items-center py-1 ${
+                    language == "en" && "opacity-50"
+                  }`}
+                >
+                  <img
+                    src="https://dandemos.github.io/image-hosting-repo/myanmar.png"
+                    alt="mm"
+                    className="w-6 h-6"
+                  />
+                </button>
+              </div>
+              
             </nav>
           </div>
         </div>
