@@ -4,9 +4,11 @@ import { useState } from "react";
 import { languageSlice } from "../../helper/customSlice";
 import { dispatchStore } from "../../lib/dispatchStore";
 import { useSelector } from "react-redux";
+import { useTypedTranslation } from "../../translation/useTypedTranslation";
 
 const Header = () => {
   const language = useSelector((state) => state?.languageSlice);
+  const { i18n, t, T } = useTypedTranslation();
 
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
@@ -21,6 +23,7 @@ const Header = () => {
 
   const handlelanguageSelect = (lang) => {
     dispatchStore(languageSlice?.actions?.setLanguage(lang));
+    i18n.changeLanguage(lang);
     setIsLanguageOpen(false);
   };
 
@@ -38,13 +41,13 @@ const Header = () => {
         {/* Navigation */}
         <nav className="hidden sm:flex space-x-6">
           <Link to={"/"} className="hover:text-sky-500 transition-all">
-            Home
+            {t(T.header.home)}
           </Link>
           <Link to={"/"} className="hover:text-sky-500 transition-all">
-            About
+            {t(T.header.about)}
           </Link>
           <Link to={"/"} className="hover:text-sky-500 transition-all">
-            Contact
+            {t(T.header.contact)}
           </Link>
 
           {/* Language Dropdown */}
@@ -147,28 +150,28 @@ const Header = () => {
               alt="Logo"
               className="w-16 h-16 bg-white p-2 shadow-md rounded-tl-xl rounded-br-xl"
             />
-            <h2 className="text-lg font-semibold">Welcome to PotanShop</h2>
+            <h2 className="text-lg font-semibold">{t(T.header.welcome_message)}</h2>
             <nav className="flex flex-col justify-center items-center w-full space-y-4 text-center">
               <Link
                 to={"/"}
                 onClick={toggleSidebar}
                 className="block w-[70%] py-2 px-4 bg-white text-sky-500 rounded-lg hover:bg-opacity-90 transition-all"
               >
-                Home
+                {t(T.header.home)}
               </Link>
               <Link
                 to={"/"}
                 onClick={toggleSidebar}
                 className="block w-[70%] py-2 px-4 bg-white text-sky-500 rounded-lg hover:bg-opacity-90 transition-all"
               >
-                About
+                {t(T.header.about)}
               </Link>
               <Link
                 to={"/"}
                 onClick={toggleSidebar}
                 className="block w-[70%] py-2 px-4 bg-white text-sky-500 rounded-lg hover:bg-opacity-90 transition-all"
               >
-                Contact
+                {t(T.header.contact)}
               </Link>
 
               <div className="flex items-center gap-4">

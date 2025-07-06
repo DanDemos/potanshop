@@ -1,0 +1,54 @@
+{
+  "home": {
+    "hot_games": "လူကြိုက်များသောဂိမ်းများ",
+    "top_up": "ငွေဖြည့်မည်",
+    "coming_soon": "မကြာမီလာမည်",
+    "under_construction": "တည်ဆောက်ဆဲ",
+    "hot_products": "အရောင်းရဆုံးပစ္စည်းများ",
+    "buy_now": "ဝယ်မည်",
+    "game_list": "Game List",
+    "see_all": "အားလုံးကြည့်မည်",
+    "game_1": "Game 1",
+    "why_shop_with_us": "ကျွန်ုပ်တို့နှင့်အတူ ဈေးဝယ်ရခြင်း၏ အကျိုးကျေးဇူးများ",
+    "free_shipping": "မှာယူ $50 အထက်",
+    "free_shipping_desc": "အခမဲ့ ပို့ဆောင်မှု",
+    "quality_guarantee": "အရည်အသွေး အာမခံချက်",
+    "quality_guarantee_desc": "ကျွန်ုပ်တို့သည် ဖောက်သည်တိုင်းအတွက် အရည်အသွေးမြင့် ကုန်ပစ္စည်းများကို အာမခံပါသည်။",
+    "customer_support": "ဖောက်သည် ထောက်ခံမှု",
+    "customer_support_desc": "သင့်၏ ဈေးဝယ်လိုအပ်ချက်များအတွက် 24/7 ထောက်ခံမှု။",
+    "products": {
+      "twilight_pass": "Twilight Pass",
+      "weekly_diamond_pass": "Weekly Diamond Pass",
+      "diamonds_56": "56 Diamonds",
+      "diamonds_112": "112 Diamonds",
+      "diamonds_168": "168 Diamonds",
+      "diamonds_224": "224 Diamonds"
+    },
+    "games": {
+      "mobile_legends": "Mobile Legends",
+      "genshin_impact": "Genshin Impact",
+      "summoners_war": "Summoners War",
+      "league_of_legend": "League of Legend",
+      "identity_v": "Idendity V"
+    }
+  },
+  "header": {
+    "home": "ပင်မစာမျက်နှာ",
+    "about": "ကျွန်ုပ်တို့အကြောင်း",
+    "contact": "ဆက်သွယ်ရန်",
+    "welcome_message": "ပိုတန်ဆိုင်ကိုကြိုဆိုပါတယ်"
+  },
+  "banner": {
+    "welcome": "ကျွန်ုပ်တို့၏ဆိုင်မှကြိုဆိုပါသည်",
+    "shop_best_deals": "ဒီနေ့ အကောင်းဆုံးရောင်းအားများကို ဝယ်ယူပါ",
+    "exclusive_offers": "ထူးခြားသော အစွဲပြုမှုများ",
+    "dont_miss_discounts": "အံ့မခန်းလျှော့စျေးများကို မပျက်စီးပဲ သုံးပါ",
+    "new_arrivals": "အသစ်တင်ထားသော ကုန်ပစ္စည်းများ",
+    "fresh_products": "သင့်အတွက် သစ်လွင်သော ကုန်ပစ္စည်းများ"
+  },
+  "game_detail": {
+    "hot_products": "Hot Products",
+    "hot": "Hot",
+    "buy_now": "ဝယ်မည်"
+  }
+} 

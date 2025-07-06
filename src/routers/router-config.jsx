@@ -1,6 +1,5 @@
 import LoginPage from "../screens/auth/LoginPage";
 import GameDetailPage from "../screens/gamedetail/GameDetailPage";
-import GameDetailHandlerScreen from "../screens/GameDetailHandlerScreen";
 import HomePage from "../screens/home/HomePage";
 import HomeHandlerScreen from "../screens/HomeHandlerScreen";
 
@@ -16,6 +15,6 @@ export const RouteConfig = [
     },
     {
         path: "/game-detail",
-        element: <GameDetailHandlerScreen />
+        element: <GameDetailPage />
     },
 ];

@@ -1,9 +1,8 @@
 /// <reference types="vite/client" />
 
 interface ImportMetaEnv {
-  readonly PRODUCTION_ENDPOINT: string;
-  readonly DEVELOP_ENDPOINT: string;
-  // Add more environment variables as needed
+  readonly VITE_PRODUCTION_ENDPOINT: string;
+  readonly VITE_DEVELOP_ENDPOINT: string;
 }
 
 interface ImportMeta {

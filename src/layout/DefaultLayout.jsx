@@ -1,5 +1,4 @@
 import Header from "./header/Header.jsx";
-import HeaderMM from "./header/HeaderMM.jsx";
 import Footer from "./footer/Footer.jsx";
 import FooterMM from "./footer/Footer copy.jsx";
 import SnowflakesEffect from "./effect/SnowflakesEffect.jsx";
@@ -16,7 +15,7 @@ const DefaultLayout = ({ children }) => {
       {/* <TopBar /> */}
 
       {/* Header */}
-      {language == "en" ? <Header /> : <HeaderMM />}
+      <Header />
 
       {/* Main Content Section */}
       <main className="mt-[59px]">{children}</main>

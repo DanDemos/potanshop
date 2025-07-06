@@ -2,17 +2,20 @@ import { toast } from "react-toastify";
 import BannerCarousel from "../../components/BannerCarousel";
 import Button from "../../components/Button";
 import { Link } from "react-router-dom";
-import FirePng from "../../assets/fire.png"
-import Dia0Png from "../../assets/dia0.webp"
-import Dia1Png from "../../assets/dia1.webp"
-import Dia2Png from "../../assets/dia2.webp"
-import Dia3Png from "../../assets/dia3.webp"
-import Dia4Png from "../../assets/dia4.webp"
+import FirePng from "../../assets/fire.png";
+import Dia0Png from "../../assets/dia0.webp";
+import Dia1Png from "../../assets/dia1.webp";
+import Dia2Png from "../../assets/dia2.webp";
+import Dia3Png from "../../assets/dia3.webp";
+import Dia4Png from "../../assets/dia4.webp";
 // import Dia5Png from "../../assets/dia5.webp"
-import Dia6Png from "../../assets/dia6.webp"
+import Dia6Png from "../../assets/dia6.webp";
 import DefaultLayout from "../../layout/DefaultLayout";
+import { useTypedTranslation } from "../../translation/useTypedTranslation";
 
 const HomePage = () => {
+  const { t, T } = useTypedTranslation();
+
   return (
     <DefaultLayout>
       {/* Hero Section */}
@@ -23,7 +26,7 @@ const HomePage = () => {
         <div className="max-w-6xl flex flex-col items-center mx-auto text-center">
           <h2 className="flex items-center text-xl font-semibold mb-3">
             <img className="w-7 h-6 me-1" src={FirePng} alt="" />
-            Hot Games
+            {t(T.home.hot_games)}
           </h2>
           <div className="max-w-4xl grid grid-cols-3 sm:grid-cols-5 sm:gap-5 gap-3 select-none">
             {/* Hot Game Item */}
@@ -53,10 +56,12 @@ const HomePage = () => {
                       className="w-full rounded-t-xl object-cover mx-auto"
                     />
                     <div className="my-2">
-                      <h3 className="font-semibold text-sm">Mobile Legends</h3>
+                      <h3 className="font-semibold text-sm">
+                        {t(T.home.games.mobile_legends)}
+                      </h3>
                     </div>
                     <Button className="group w-full h-[40px] mx-auto">
-                      Top Up
+                      {t(T.home.top_up)}
                     </Button>
                   </Link>
                 );
@@ -87,7 +92,9 @@ const HomePage = () => {
                       className="w-full rounded-t-xl object-cover mx-auto"
                     />
                     <div className="my-2">
-                      <h3 className="font-semibold text-sm">Genshin Impact</h3>
+                      <h3 className="font-semibold text-sm">
+                        {t(T.home.games.genshin_impact)}
+                      </h3>
                     </div>
                     <Button
                       className="group w-full h-[40px] mx-auto"
@@ -95,14 +102,14 @@ const HomePage = () => {
                         toast.warn(
                           <div className="flex flex-col gap-0 ms-2">
                             <h1 className="text-sm font-semibold">
-                              Coming Soon
+                              {t(T.home.coming_soon)}
                             </h1>
-                            <p className="text-xs">Under construction</p>
+                            <p className="text-xs">{t(T.home.under_construction)}</p>
                           </div>
                         )
                       }
                     >
-                      Top Up
+                      {t(T.home.top_up)}
                     </Button>
                   </Link>
                 );
@@ -133,7 +140,9 @@ const HomePage = () => {
                       className="w-full rounded-t-xl object-cover mx-auto"
                     />
                     <div className="my-2">
-                      <h3 className="font-semibold text-sm">Summoners War</h3>
+                      <h3 className="font-semibold text-sm">
+                        {t(T.home.games.summoners_war)}
+                      </h3>
                     </div>
                     <Button
                       className="group w-full h-[40px] mx-auto"
@@ -141,14 +150,14 @@ const HomePage = () => {
                         toast.warn(
                           <div className="flex flex-col gap-0 ms-2">
                             <h1 className="text-sm font-semibold">
-                              Coming Soon
+                              {t(T.home.coming_soon)}
                             </h1>
-                            <p className="text-xs">Under construction</p>
+                            <p className="text-xs">{t(T.home.under_construction)}</p>
                           </div>
                         )
                       }
                     >
-                      Top Up
+                      {t(T.home.top_up)}
                     </Button>
                   </Link>
                 );
@@ -179,7 +188,9 @@ const HomePage = () => {
                       className="w-full rounded-t-xl object-cover mx-auto"
                     />
                     <div className="my-2">
-                      <h3 className="font-semibold text-sm">League of Legend</h3>
+                      <h3 className="font-semibold text-sm">
+                        {t(T.home.games.league_of_legend)}
+                      </h3>
                     </div>
                     <Button
                       className="group w-full h-[40px] mx-auto"
@@ -187,14 +198,14 @@ const HomePage = () => {
                         toast.warn(
                           <div className="flex flex-col gap-0 ms-2">
                             <h1 className="text-sm font-semibold">
-                              Coming Soon
+                              {t(T.home.coming_soon)}
                             </h1>
-                            <p className="text-xs">Under construction</p>
+                            <p className="text-xs">{t(T.home.under_construction)}</p>
                           </div>
                         )
                       }
                     >
-                      Top Up
+                      {t(T.home.top_up)}
                     </Button>
                   </Link>
                 );
@@ -225,7 +236,9 @@ const HomePage = () => {
                       className="w-full rounded-t-xl object-cover mx-auto"
                     />
                     <div className="my-2">
-                      <h3 className="font-semibold text-sm">Idendity V</h3>
+                      <h3 className="font-semibold text-sm">
+                        {t(T.home.games.identity_v)}
+                      </h3>
                     </div>
                     <Button
                       className="group w-full h-[40px] mx-auto"
@@ -233,14 +246,14 @@ const HomePage = () => {
                         toast.warn(
                           <div className="flex flex-col gap-0 ms-2">
                             <h1 className="text-sm font-semibold">
-                              Coming Soon
+                              {t(T.home.coming_soon)}
                             </h1>
-                            <p className="text-xs">Under construction</p>
+                            <p className="text-xs">{t(T.home.under_construction)}</p>
                           </div>
                         )
                       }
                     >
-                      Top Up
+                      {t(T.home.top_up)}
                     </Button>
                   </Link>
                 );
@@ -254,7 +267,7 @@ const HomePage = () => {
         <div className="max-w-6xl flex flex-col items-center mx-auto text-center">
           <h2 className="flex items-center text-xl font-semibold mb-3">
             <img className="w-7 h-6 me-1" src={FirePng} alt="" />
-            Hot Products
+            {t(T.home.hot_products)}
           </h2>
           <div className="max-w-4xl grid grid-cols-3 sm:grid-cols-6 sm:gap-5 gap-2 select-none">
             {/* Hot Product Item */}
@@ -282,7 +295,7 @@ const HomePage = () => {
                     />
                     <div className="my-2">
                       <h3 className="font-semibold text-sm mb-1">
-                        Twilight Pass
+                        {t(T.home.products.twilight_pass)}
                       </h3>
                       <p className="text-gray-600">$8.99</p>
                     </div>
@@ -290,7 +303,7 @@ const HomePage = () => {
                       className="group w-full h-[30px] mx-auto"
                       onClick={() => null}
                     >
-                      Buy Now
+                      {t(T.home.buy_now)}
                     </Button>
                   </div>
                 );
@@ -319,7 +332,7 @@ const HomePage = () => {
                     />
                     <div className="my-2">
                       <h3 className="font-semibold text-sm mb-1">
-                        Weekly Diamond Pass
+                        {t(T.home.products.weekly_diamond_pass)}
                       </h3>
                       <p className="text-gray-600">$1.89</p>
                     </div>
@@ -327,7 +340,7 @@ const HomePage = () => {
                       className="group w-full h-[30px] mx-auto"
                       onClick={() => null}
                     >
-                      Buy Now
+                      {t(T.home.buy_now)}
                     </Button>
                   </div>
                 );
@@ -356,7 +369,7 @@ const HomePage = () => {
                     />
                     <div className="my-2">
                       <h3 className="font-semibold text-sm mb-1">
-                        56 Diamonds
+                        {t(T.home.products.diamonds_56)}
                       </h3>
                       <p className="text-gray-600">$0.89</p>
                     </div>
@@ -364,7 +377,7 @@ const HomePage = () => {
                       className="group w-full h-[30px] mx-auto"
                       onClick={() => null}
                     >
-                      Buy Now
+                      {t(T.home.buy_now)}
                     </Button>
                   </div>
                 );
@@ -393,7 +406,7 @@ const HomePage = () => {
                     />
                     <div className="my-2">
                       <h3 className="font-semibold text-sm mb-1">
-                        112 Diamonds
+                        {t(T.home.products.diamonds_112)}
                       </h3>
                       <p className="text-gray-600">$1.77</p>
                     </div>
@@ -401,7 +414,7 @@ const HomePage = () => {
                       className="group w-full h-[30px] mx-auto"
                       onClick={() => null}
                     >
-                      Buy Now
+                      {t(T.home.buy_now)}
                     </Button>
                   </div>
                 );
@@ -430,7 +443,7 @@ const HomePage = () => {
                     />
                     <div className="my-2">
                       <h3 className="font-semibold text-sm mb-1">
-                        168 Diamonds
+                        {t(T.home.products.diamonds_168)}
                       </h3>
                       <p className="text-gray-600">$2.65</p>
                     </div>
@@ -438,7 +451,7 @@ const HomePage = () => {
                       className="group w-full h-[30px] mx-auto"
                       onClick={() => null}
                     >
-                      Buy Now
+                      {t(T.home.buy_now)}
                     </Button>
                   </div>
                 );
@@ -467,7 +480,7 @@ const HomePage = () => {
                     />
                     <div className="my-2">
                       <h3 className="font-semibold text-sm mb-1">
-                        224 Diamonds
+                        {t(T.home.products.diamonds_224)}
                       </h3>
                       <p className="text-gray-600">$3.54</p>
                     </div>
@@ -475,7 +488,7 @@ const HomePage = () => {
                       className="group w-full h-[30px] mx-auto"
                       onClick={() => null}
                     >
-                      Buy Now
+                      {t(T.home.buy_now)}
                     </Button>
                   </div>
                 );
@@ -488,9 +501,9 @@ const HomePage = () => {
       <section className="px-3 py-5 sm:px-0">
         <div className="max-w-6xl mx-auto text-center">
           <div className="flex justify-between">
-            <h2 className="text-2xl font-bold mb-3">Game List</h2>
+            <h2 className="text-2xl font-bold mb-3">{t(T.home.game_list)}</h2>
             <Button className="w-[110px] h-[33px]" onClick={() => null}>
-              See All
+              {t(T.home.see_all)}
             </Button>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 select-none">
@@ -507,7 +520,9 @@ const HomePage = () => {
                       alt="Product 1"
                       className="w-full h-40 object-cover rounded-lg mb-4"
                     />
-                    <h3 className="font-semibold text-xl mb-2">Game 1</h3>
+                    <h3 className="font-semibold text-xl mb-2">
+                      {t(T.home.game_1)}
+                    </h3>
                   </div>
                 );
               })}
@@ -519,19 +534,27 @@ const HomePage = () => {
       {/* Benefits Section */}
       <section className="bg-gray-100 px-3 py-16 sm:px-0">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-10">Why Shop With Us?</h2>
+          <h2 className="text-3xl font-bold mb-10">
+            {t(T.home.why_shop_with_us)}
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-12">
             <div className="text-left">
-              <h3 className="text-xl font-semibold mb-4">Free Shipping</h3>
-              <p>On all orders over $50.</p>
+              <h3 className="text-xl font-semibold mb-4">
+                {t(T.home.free_shipping)}
+              </h3>
+              <p>{t(T.home.free_shipping_desc)}</p>
             </div>
             <div className="text-left">
-              <h3 className="text-xl font-semibold mb-4">Quality Guarantee</h3>
-              <p>We ensure high-quality products for every customer.</p>
+              <h3 className="text-xl font-semibold mb-4">
+                {t(T.home.quality_guarantee)}
+              </h3>
+              <p>{t(T.home.quality_guarantee_desc)}</p>
             </div>
             <div className="text-left">
-              <h3 className="text-xl font-semibold mb-4">Customer Support</h3>
-              <p>24/7 support for all your shopping needs.</p>
+              <h3 className="text-xl font-semibold mb-4">
+                {t(T.home.customer_support)}
+              </h3>
+              <p>{t(T.home.customer_support_desc)}</p>
             </div>
           </div>
         </div>

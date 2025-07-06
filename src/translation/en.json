@@ -1,0 +1,54 @@
+{
+  "home": {
+    "hot_games": "Hot Games",
+    "top_up": "Top Up",
+    "coming_soon": "Coming Soon",
+    "under_construction": "Under construction",
+    "hot_products": "Hot Products",
+    "buy_now": "Buy Now",
+    "game_list": "Game List",
+    "see_all": "See All",
+    "game_1": "Game 1",
+    "why_shop_with_us": "Why Shop With Us?",
+    "free_shipping": "Free Shipping",
+    "free_shipping_desc": "On all orders over $50.",
+    "quality_guarantee": "Quality Guarantee",
+    "quality_guarantee_desc": "We ensure high-quality products for every customer.",
+    "customer_support": "Customer Support",
+    "customer_support_desc": "24/7 support for all your shopping needs.",
+    "products": {
+      "twilight_pass": "Twilight Pass",
+      "weekly_diamond_pass": "Weekly Diamond Pass",
+      "diamonds_56": "56 Diamonds",
+      "diamonds_112": "112 Diamonds",
+      "diamonds_168": "168 Diamonds",
+      "diamonds_224": "224 Diamonds"
+    },
+    "games": {
+      "mobile_legends": "Mobile Legends",
+      "genshin_impact": "Genshin Impact",
+      "summoners_war": "Summoners War",
+      "league_of_legend": "League of Legend",
+      "identity_v": "Idendity V"
+    }
+  },
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "welcome_message": "Welcome to PotanShop"
+  },
+  "banner": {
+    "welcome": "Welcome to Our Store",
+    "shop_best_deals": "Shop the best deals today",
+    "exclusive_offers": "Exclusive Offers",
+    "dont_miss_discounts": "Don't miss out on amazing discounts",
+    "new_arrivals": "New Arrivals",
+    "fresh_products": "Fresh products just for you"
+  },
+  "game_detail": {
+    "hot_products": "Hot Products",
+    "hot": "Hot",
+    "buy_now": "Buy Now"
+  }
+} 

@@ -1,4 +1,4 @@
-import { res_modifiers_config } from "../../helper/res_modifiers_config";
+// import { res_modifiers_config } from "../../helper/res_modifiers_config";
 
 // Define the API URLs for different environments
 export const API_URLs = {
@@ -8,12 +8,16 @@ export const API_URLs = {
 
 export const endpoints = Object.freeze({
   auth: {
-    signIn: {
+    promotion: {
       method: "get",
-      endpoint: "api/auth/{:userid}/token",
-      res_modifier: res_modifiers_config.getAccessToken,
-      token: "optional", // require, optional
+      endpoint: "promotions",
+      // res_modifier: res_modifiers_config.getAccessToken,
+      // token: "optional", // require, optional
       // expire_in: 10
+    },
+    userProfile: {
+      method: "get",
+      endpoint: "user/profile",
     },
   },
   others: {
