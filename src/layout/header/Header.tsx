@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 import DiamondIcon from "../../assets/DiamondIcon.png";
 import { useState } from "react";
 import { languageSlice } from "../../helper/customSlice";
-import { dispatchStore } from "../../lib/dispatchStore";
 import { useSelector } from "react-redux";
 import { useTypedTranslation } from "../../translation/useTypedTranslation";
 import { RootState } from "../../redux/store/configureStore";
+import { dispatchStore } from "../../lib/dispatchStore";
 
 const Header = () => {
   const { i18n, t, T } = useTypedTranslation();

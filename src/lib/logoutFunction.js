@@ -1,8 +1,8 @@
-import { dispatchStore } from "./dispatchStore";
 import localStorage from "redux-persist/es/storage";
 import { useLocation } from "react-router-dom";
 import { ProfilePopupSlice } from "../helper/customSlice";
 import { selectStore } from "./selectStore";
+import { dispatchStore } from "./dispatchStore";
 
 const LogoutToHomeUrls = [
   "/checkout",

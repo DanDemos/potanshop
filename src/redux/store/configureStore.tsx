@@ -76,6 +76,8 @@ export const store = configureStore({
   devTools: import.meta.env.MODE !== 'production',
 });
 
+export type AppDispatch = typeof store.dispatch;
+
 export type RootState = DynamicSlices & DynamicSliceTypes & {
   loading: ReturnType<typeof loadingSlice.reducer>;
   AccessToken: ReturnType<typeof AccessTokenSlice.reducer>;

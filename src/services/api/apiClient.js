@@ -1,5 +1,4 @@
 import { createApiThunk } from "../../redux/reducers/reducer";
-import { dispatchStore } from "../../lib/dispatchStore";
 import { selectStore } from "../../lib/selectStore";
 import { endpoints } from "./endpoints";
 import storage from "redux-persist/lib/storage";
@@ -8,6 +7,7 @@ import { token_endpoint } from "../../helper/setAccessToken";
 import { loadingSlice } from "../../redux/reducers/reducer";
 import callAxios from "./axios";
 import { token_key } from "../../helper/setAccessToken";
+import { dispatchStore } from "../../lib/dispatchStore";
 
 const callApi = (apiName) => {
   let uniqueAPI_id = null;
