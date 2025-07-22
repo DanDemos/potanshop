@@ -6,7 +6,7 @@ import {
 } from "react-icons/fa";
 import { useTypedTranslation } from "../../translation/useTypedTranslation";
 
-const Footer = () => {
+export function Footer(): JSX.Element {
   const { i18n, t, T } = useTypedTranslation();
 
   return (
@@ -110,6 +110,6 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
+}
 
 export default Footer;

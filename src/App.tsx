@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
-import AppLayout from "./routers";
-import LanguageSync from "./components/LanguageSync";
 import callApi from "./services/api/apiClient";
 import { useSelector } from "react-redux";
 import { RootState } from "./redux/store/configureStore";
+import AppLayout from "./routers";
+import LanguageSync from "./components/LanguageSync";
 
-const App: React.FC = () => {
+export function App(): JSX.Element {
   const language = useSelector((state: RootState) => state?.languageSlice);
   const siteSetting = useSelector(
     (state: RootState) => state?.setting?.siteSetting?.data
@@ -20,7 +20,7 @@ const App: React.FC = () => {
   }, [language]);
 
   useEffect(() => {
-    console.log(siteSetting?.data, "siteSetting");
+    // console.log(siteSetting?.data, "siteSetting");
     const link: HTMLLinkElement =
       document.querySelector("link[rel~='icon']") ||
       document.createElement("link");
@@ -36,6 +36,6 @@ const App: React.FC = () => {
       <AppLayout />
     </>
   );
-};
+}
 
 export default App;

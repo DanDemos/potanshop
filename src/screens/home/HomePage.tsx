@@ -299,108 +299,42 @@ const HomePage = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 select-none">
             {/* Product Item - hardcoded array with DelayedSlider */}
-            {[
-              {
-                img: "https://cdn2.omg.rocks/i/15f36db9f43170/mobile-legends-cover.png?w=768",
-                title: t(T.home.game_1),
-              },
-              {
-                img: "https://cdn2.omg.rocks/i/15f36db9f43170/mobile-legends-cover.png?w=768",
-                title: t(T.home.game_1),
-              },
-              {
-                img: "https://cdn2.omg.rocks/i/15f36db9f43170/mobile-legends-cover.png?w=768",
-                title: t(T.home.game_1),
-              },
-              {
-                img: "https://cdn2.omg.rocks/i/15f36db9f43170/mobile-legends-cover.png?w=768",
-                title: t(T.home.game_1),
-              },
-              {
-                img: "https://cdn2.omg.rocks/i/15f36db9f43170/mobile-legends-cover.png?w=768",
-                title: t(T.home.game_1),
-              },
-              {
-                img: "https://cdn2.omg.rocks/i/15f36db9f43170/mobile-legends-cover.png?w=768",
-                title: t(T.home.game_1),
-              },
-              {
-                img: "https://cdn2.omg.rocks/i/15f36db9f43170/mobile-legends-cover.png?w=768",
-                title: t(T.home.game_1),
-              },
-              {
-                img: "https://cdn2.omg.rocks/i/15f36db9f43170/mobile-legends-cover.png?w=768",
-                title: t(T.home.game_1),
-              },
-            ].map((game, key) => (
-              <div key={key} className="bg-white p-3 rounded-lg shadow-lg">
+            {gameList?.data?.map((game, key: number) => (
+              <div
+                key={key}
+                className="bg-white p-3 rounded-lg shadow-lg hover:scale-[101%] transition-scale duration-200 ease-in-out"
+              >
                 <DelayedSlider
                   sliderKey={key}
                   delay={key * 500}
                   settings={settings}
                   placeholder={
                     <Slider key="PlaceHolder" {...placeholderSettings}>
-                      <div className="relative w-full h-full">
-                        <img
-                          src={
-                            "https://pbs.twimg.com/media/Dzynpt7W0AAS6In.jpg"
-                          }
-                          alt="Banner 1"
-                          className="object-cover w-full h-full"
-                        />
-                      </div>
-
-                      <div className="relative w-full h-full">
-                        <img
-                          src={
-                            "https://assetsio.gnwcdn.com/Lol_W_R.jpg?width=1920&height=1920&fit=bounds&quality=80&format=jpg&auto=webp"
-                          }
-                          alt="Banner 2"
-                          className="object-cover w-full h-full"
-                        />
-                      </div>
-
-                      <div className="relative w-full h-full">
-                        <img
-                          src={
-                            "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/23f374c7-7ea4-40f8-96e3-1d379018049a/dbfkl0s-266a511e-5f07-4b28-870a-f58c91c724e5.png/v1/fill/w_1200,h_400,q_80,strp/xayah_and_rakan_banner__1200_x_400__by_mempsu_dbfkl0s-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDAwIiwicGF0aCI6IlwvZlwvMjNmMzc0YzctN2VhNC00MGY4LTk2ZTMtMWQzNzkwMTgwNDlhXC9kYmZrbDBzLTI2NmE1MTFlLTVmMDctNGIyOC04NzBhLWY1OGM5MWM3MjRlNS5wbmciLCJ3aWR0aCI6Ijw9MTIwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19._yG9GaOB18t_z8hv12u8W_GDqxldpwSnMozIPDdPno0"
-                          }
-                          alt="Banner 3"
-                          className="object-cover w-full h-full"
-                        />
-                      </div>
+                      {game?.banner?.data?.map((each, key: number) => (
+                        <div key={key} className="relative w-full h-full">
+                          <img
+                            src={each?.banner_image}
+                            alt={each?.banner_title}
+                            className="object-cover w-full h-full"
+                          />
+                        </div>
+                      ))}
                     </Slider>
                   }
                 >
-                  <div className="relative w-full h-full">
-                    <img
-                      src={"https://pbs.twimg.com/media/Dzynpt7W0AAS6In.jpg"}
-                      alt="Banner 1"
-                      className="object-cover w-full h-full"
-                    />
-                  </div>
-
-                  <div className="relative w-full h-full">
-                    <img
-                      src={
-                        "https://assetsio.gnwcdn.com/Lol_W_R.jpg?width=1920&height=1920&fit=bounds&quality=80&format=jpg&auto=webp"
-                      }
-                      alt="Banner 2"
-                      className="object-cover w-full h-full"
-                    />
-                  </div>
-
-                  <div className="relative w-full h-full">
-                    <img
-                      src={
-                        "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/23f374c7-7ea4-40f8-96e3-1d379018049a/dbfkl0s-266a511e-5f07-4b28-870a-f58c91c724e5.png/v1/fill/w_1200,h_400,q_80,strp/xayah_and_rakan_banner__1200_x_400__by_mempsu_dbfkl0s-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDAwIiwicGF0aCI6IlwvZlwvMjNmMzc0YzctN2VhNC00MGY4LTk2ZTMtMWQzNzkwMTgwNDlhXC9kYmZrbDBzLTI2NmE1MTFlLTVmMDctNGIyOC04NzBhLWY1OGM5MWM3MjRlNS5wbmciLCJ3aWR0aCI6Ijw9MTIwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19._yG9GaOB18t_z8hv12u8W_GDqxldpwSnMozIPDdPno0"
-                      }
-                      alt="Banner 3"
-                      className="object-cover w-full h-full"
-                    />
-                  </div>
+                  {game?.banner?.data?.map((each, key: number) => (
+                    <div key={key} className="relative w-full h-full">
+                      <img
+                        src={each?.banner_image}
+                        alt={each?.banner_title}
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
+                  ))}
                 </DelayedSlider>
-                <h3 className="font-semibold text-xl mb-2">{game.title}</h3>
+                <h3 className="font-semibold text-xl mb-2">
+                  {game.game_title}
+                </h3>
               </div>
             ))}
           </div>

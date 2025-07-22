@@ -17,7 +17,7 @@ const resolveClassConflicts = (defaultClasses: string, passedClasses: string) =>
   const dynamicClassPattern = /([a-zA-Z]+-\[\d+px\])/;
 
   // Process default and passed classes
-  const processedClassList = defaultClassList.map((defaultClass) => {
+  const processedClassList = defaultClassList?.map((defaultClass) => {
     // Check if the class matches the pattern for dynamic values (e.g., w-[100px])
     if (dynamicClassPattern.test(defaultClass)) {
       // Try to find the same class in passedClassList

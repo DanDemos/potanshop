@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import Slider from "react-slick";
 import { RootState } from "../redux/store/configureStore";
 
-const GameDetailCarousel: React.FC = () => {
+export function GameDetailCarousel(): JSX.Element {
   const settings = {
     dots: true,
     infinite: true,
@@ -78,12 +78,14 @@ const GameDetailCarousel: React.FC = () => {
         <div className="hidden sm:block sm:w-1/3 px-8 pt-7">
           {" "}
           {/* Right side for the paragraph */}
-          <h3 className="text-md font-bold mb-2">{gameDetail?.data?.game_title}</h3>
+          <h3 className="text-md font-bold mb-2">
+            {gameDetail?.data?.game_title}
+          </h3>
           <p className="text-xs">{gameDetail?.data?.description}</p>
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default GameDetailCarousel;

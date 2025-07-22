@@ -36,8 +36,8 @@ type DynamicSlices = {
 // Combine the reducers from the 'slice' object
 const obj = {
   [AccessTokenSlice.name]: AccessTokenSlice.reducer,
-  ...Object.fromEntries(Object.entries(slice).map(([key, { reducer }]) => [key, reducer])),
-  ...Object.fromEntries(Object.entries(CustomSlice).map(([key, { reducer }]) => [key, reducer])),
+  ...Object.fromEntries(Object.entries(slice)?.map(([key, { reducer }]) => [key, reducer])),
+  ...Object.fromEntries(Object.entries(CustomSlice)?.map(([key, { reducer }]) => [key, reducer])),
   [loadingSlice.name]: loadingSlice.reducer,
 }
 

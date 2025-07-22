@@ -1,10 +1,10 @@
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store/configureStore";
-import SnowflakesEffect from "./effect/SnowflakesEffect";
 import { RingLoader } from "react-spinners";
 import Footer from "./footer/Footer";
 import LoadingComponent from "../components/loading/LoadingComponent";
 import Header from "./header/Header";
+import SnowflakesEffect from "./effect/SnowflakesEffect";
 
 interface DefaultLayoutProps {
   children: React.ReactNode;

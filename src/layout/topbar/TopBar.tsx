@@ -1,4 +1,6 @@
-const TopBar = () => {
+import React from "react";
+
+function TopBar(): React.ReactElement {
   return (
     <section className="bg-blue-500 text-white py-2">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
@@ -7,5 +9,6 @@ const TopBar = () => {
       </div>
     </section>
   );
-};
+}
+
 export default TopBar;
