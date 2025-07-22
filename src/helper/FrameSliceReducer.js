@@ -4,7 +4,7 @@ export const FrameSliceReducer = {
     return state;
   },
   clearSliceElement: (state, action) => {
-    console.log(action?.payload, "sheet");
+    // console.log(action?.payload, "sheet");
     state[action?.payload] = {};
     return state;
   },

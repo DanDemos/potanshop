@@ -25,7 +25,6 @@
       "diamonds_224": "224 Diamonds"
     },
     "games": {
-      "mobile_legends": "Mobile Legends",
       "genshin_impact": "Genshin Impact",
       "summoners_war": "Summoners War",
       "league_of_legend": "League of Legend",
@@ -50,5 +49,15 @@
     "hot_products": "Hot Products",
     "hot": "Hot",
     "buy_now": "Buy Now"
+  },
+  "footer": {
+    "about_potan": "About PotanShop",
+    "potan_description": "PotanShop is your one-stop online store for in-game currency and accessories. Enjoy fast and secure transactions, reliable customer support, and a wide selection of games.",
+    "follow_us": "Follow Us",
+    "quick_links": "Quick Links",
+    "privacy_policy": "Privacy Policy",
+    "terms_and_conditions": "Terms and Conditions",
+    "contact_us": "Contact Us",
+    "about_potan": "About PotanShop"
   }
-} 
+}

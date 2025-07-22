@@ -1,5 +1,7 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import Slider from "react-slick";
+import { RootState } from "../redux/store/configureStore";
 
 const GameDetailCarousel: React.FC = () => {
   const settings = {
@@ -13,6 +15,10 @@ const GameDetailCarousel: React.FC = () => {
     arrows: true,
   };
 
+  const gameDetail = useSelector(
+    (state: RootState) => state?.home?.gameList?.data
+  );
+
   return (
     <div className="flex justify-center w-full ">
       <div className="relative flex max-w-full sm:max-w-[80%] h-auto bg-gray-200">
@@ -22,7 +28,9 @@ const GameDetailCarousel: React.FC = () => {
           <Slider {...settings}>
             <div className="relative w-full h-full">
               <img
-                src={"https://play-lh.googleusercontent.com/2DGT6oNwvLpbiCuAL89jWdc3B1hFBx8dXHOTVsaToouE6uCmSHynk9cQSwPlbwvP2w=w1052-h592"}
+                src={
+                  "https://play-lh.googleusercontent.com/2DGT6oNwvLpbiCuAL89jWdc3B1hFBx8dXHOTVsaToouE6uCmSHynk9cQSwPlbwvP2w=w1052-h592"
+                }
                 alt="Banner 1"
                 className="object-cover w-full h-full"
               />
@@ -70,18 +78,8 @@ const GameDetailCarousel: React.FC = () => {
         <div className="hidden sm:block sm:w-1/3 px-8 pt-7">
           {" "}
           {/* Right side for the paragraph */}
-          <h3 className="text-md font-bold mb-2">About this game</h3>
-          <p className="text-xs">
-            Join your friends in Mobile Legends: Bang Bang, the brand new 5v5
-            MOBA showdown, and fight against real players! Choose your favorite
-            heroes and build the perfect team with your comrades-in-arms!
-            10-second matchmaking, 10-minute battles. Laning, jungling, pushing,
-            and teamfighting, all the fun of PC MOBA and action games in the
-            palm of your hand! Feed your eSports spirit! Mobile Legends: Bang
-            Bang, the fascinating MOBA game on mobile. Smash and outplay your
-            enemies and achieve the final victory with your teammates! Your
-            phone thirsts for battle!
-          </p>
+          <h3 className="text-md font-bold mb-2">{gameDetail?.data?.game_title}</h3>
+          <p className="text-xs">{gameDetail?.data?.description}</p>
         </div>
       </div>
     </div>

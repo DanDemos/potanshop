@@ -5,6 +5,7 @@ interface ButtonProps {
   onClick?: () => void;
   style?: CSSProperties;
   className?: string; // Accept className as a prop
+  disabled?: boolean;
 }
 
 // Utility function to handle dynamic tailwind classes with arbitrary values (e.g., w-[100px], h-[50px])
@@ -33,7 +34,7 @@ const resolveClassConflicts = (defaultClasses: string, passedClasses: string) =>
   return finalClasses;
 };
 
-const Button: React.FC<ButtonProps> = ({ children, onClick, style, className }) => {
+const Button: React.FC<ButtonProps> = ({ children, onClick, style, className, disabled }) => {
   // Default className with arbitrary values
   const defaultClassName = 'container relative backdrop-blur-sm w-[160px] h-[60px] bg-[#4e4c57]/100 text-white shadow-[4px_4px_20px_rgba(0,0,0,0)]';
 
@@ -45,6 +46,8 @@ const Button: React.FC<ButtonProps> = ({ children, onClick, style, className }) 
       className={finalClassName} // Apply the resolved className
       style={style} // Inline styles to overwrite defaults
       onClick={onClick}
+      disabled={disabled}
+      aria-disabled={disabled}
     >
       <span className={`group glassbutton relative block w-full h-full no-underline text-sm tracking-wide overflow-hidden hover:text-[#298fef] group-hover:text-[#298fef] ${finalClassName}`}>
         <span className="absolute block transition-all duration-500 ease-in-out top-0 left-0 w-0 h-[4px] bg-[#2c7bd3] group-hover:w-full group-hover:translate-x-full"></span>

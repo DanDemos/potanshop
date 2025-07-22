@@ -6,7 +6,7 @@ export const RouteConfig = [
     {
         path: "/",
         element: <HomePage />,
-        special_access: "user"
+        // special_access: "user"
     },
     {
         path: "/login",

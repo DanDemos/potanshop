@@ -25,7 +25,6 @@
       "diamonds_224": "224 Diamonds"
     },
     "games": {
-      "mobile_legends": "Mobile Legends",
       "genshin_impact": "Genshin Impact",
       "summoners_war": "Summoners War",
       "league_of_legend": "League of Legend",
@@ -50,5 +49,15 @@
     "hot_products": "Hot Products",
     "hot": "Hot",
     "buy_now": "ဝယ်မည်"
+  },
+  "footer": {
+    "about_potan": "PotanShop အကြောင်း",
+    "potan_description": "PotanShop သည် အွန်လိုင်း ဂိမ်းငွေပမာဏ နှင့် အသုံးပြုမှုဆိုင်ရာ ပစ္စည်းများအတွက် တစ်နေရာတည်း ဝယ်ယူနိုင်သော ဆိုင်တစ်ခုဖြစ်သည်။ အမြန်နှင့် လုံခြုံသော လုပ်ငန်းစဉ်များ၊ ယုံကြည်စိတ်ချရသော ဖောက်သည်ကူညီမှုနှင့် ဂိမ်းများစွာ ရွေးချယ်နိုင်ပါသည်။",
+    "follow_us": "ကျွန်ုပ်တို့ကို follow ရန်",
+    "quick_links": "အမြန်လင့်ခ်များ",
+    "privacy_policy": "ပုဂ္ဂိုလ်ရေးအချက်အလက် မူဝါဒ",
+    "terms_and_conditions": "သဘောတူညီချက်များနှင့် ရည်ညွှန်းချက်များ",
+    "contact_us": "ကျွန်ုပ်တို့နှင့် ဆက်သွယ်ရန်",
+    "about_potan": "PotanShop အကြောင်း"
   }
-} 
+}

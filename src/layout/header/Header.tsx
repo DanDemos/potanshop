@@ -5,11 +5,14 @@ import { languageSlice } from "../../helper/customSlice";
 import { dispatchStore } from "../../lib/dispatchStore";
 import { useSelector } from "react-redux";
 import { useTypedTranslation } from "../../translation/useTypedTranslation";
+import { RootState } from "../../redux/store/configureStore";
 
 const Header = () => {
-  const language = useSelector((state) => state?.languageSlice);
   const { i18n, t, T } = useTypedTranslation();
-
+  const language = useSelector((state: RootState) => state?.languageSlice);
+  const siteSetting = useSelector(
+    (state: RootState) => state?.setting?.siteSetting?.data
+  );
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
 
@@ -33,8 +36,14 @@ const Header = () => {
         {/* Logo */}
         <Link to={"/"} className="text-2xl font-extrabold tracking-tight">
           <div className="flex items-center gap-1">
-            <img className="w-[35px] h-[35px]" src={DiamondIcon} alt="" />
-            <span className="text-sky-500">PotanShop</span>
+            {siteSetting?.data?.site_logo && (
+              <img
+                className="w-[35px] h-[35px]"
+                src={siteSetting?.data?.site_logo}
+                alt="Site Logo"
+              />
+            )}
+            <span className="text-sky-500">{siteSetting?.data?.site_name}</span>
           </div>
         </Link>
 
@@ -150,7 +159,9 @@ const Header = () => {
               alt="Logo"
               className="w-16 h-16 bg-white p-2 shadow-md rounded-tl-xl rounded-br-xl"
             />
-            <h2 className="text-lg font-semibold">{t(T.header.welcome_message)}</h2>
+            <h2 className="text-lg font-semibold">
+              {t(T.header.welcome_message)}
+            </h2>
             <nav className="flex flex-col justify-center items-center w-full space-y-4 text-center">
               <Link
                 to={"/"}
@@ -200,7 +211,6 @@ const Header = () => {
                   />
                 </button>
               </div>
-
             </nav>
           </div>
         </div>

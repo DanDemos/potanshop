@@ -1,18 +1,37 @@
 import Button from "../../components/Button";
 import GameDetailCarousel from "../../components/GameDetailCarousel";
-import FirePng from "../../assets/fire.png"
-import Dia0Png from "../../assets/dia0.webp"
-import Dia1Png from "../../assets/dia1.webp"
-import Dia2Png from "../../assets/dia2.webp"
-import Dia3Png from "../../assets/dia3.webp"
-import Dia4Png from "../../assets/dia4.webp"
+import FirePng from "../../assets/fire.png";
+import Dia0Png from "../../assets/dia0.webp";
+import Dia1Png from "../../assets/dia1.webp";
+import Dia2Png from "../../assets/dia2.webp";
+import Dia3Png from "../../assets/dia3.webp";
+import Dia4Png from "../../assets/dia4.webp";
 // import Dia5Png from "../../assets/dia5.webp"
-import Dia6Png from "../../assets/dia6.webp"
+import Dia6Png from "../../assets/dia6.webp";
 import DefaultLayout from "../../layout/DefaultLayout";
 import { useTypedTranslation } from "../../translation/useTypedTranslation";
+import { useSelector } from "react-redux";
+import { useEffect } from "react";
+import callApi from "../../services/api/apiClient";
+import { useSearchParams } from "react-router-dom";
+import BenefitsComponent from "../../components/BenefitsComponent";
 
 const GameDetailPage = () => {
   const { t, T } = useTypedTranslation();
+  const [searchParams] = useSearchParams();
+  const gameId = searchParams.get("id");
+
+  const gameDetail = useSelector((state) => state?.home?.gameDetail?.data);
+
+  useEffect(() => {
+    if (gameId) {
+      callApi("home/gameDetail")
+        .withKeyParameter({ id: gameId })
+        .loadingGroup("gameDetail")
+        .executeDispatch();
+    }
+  }, [gameId]);
+
   return (
     <DefaultLayout>
       {/* Hero Section */}
@@ -489,25 +508,7 @@ const GameDetailPage = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="bg-gray-100 px-3 py-16 sm:px-0">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-10">Why Shop With Us?</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-12">
-            <div className="text-left">
-              <h3 className="text-xl font-semibold mb-4">Free Shipping</h3>
-              <p>On all orders over $50.</p>
-            </div>
-            <div className="text-left">
-              <h3 className="text-xl font-semibold mb-4">Quality Guarantee</h3>
-              <p>We ensure high-quality products for every customer.</p>
-            </div>
-            <div className="text-left">
-              <h3 className="text-xl font-semibold mb-4">Customer Support</h3>
-              <p>24/7 support for all your shopping needs.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <BenefitsComponent />
     </DefaultLayout>
   );
 };

@@ -4,8 +4,11 @@ import {
   FaRegCommentDots,
   FaViber,
 } from "react-icons/fa";
+import { useTypedTranslation } from "../../translation/useTypedTranslation";
 
 const Footer = () => {
+  const { i18n, t, T } = useTypedTranslation();
+
   return (
     <footer className="bg-gray-800 text-white py-12">
       <div className="max-w-6xl mx-auto px-6">
@@ -13,11 +16,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-12">
           {/* About Section */}
           <div className="col-span-1">
-            <h3 className="text-lg font-semibold mb-4">About PotanShop</h3>
+            <h3 className="text-lg font-semibold mb-4">
+              {t(T.footer.about_potan)}
+            </h3>
             <p className="text-sm text-gray-400">
-              PotanShop is your one-stop online store for in-game currency and
-              accessories. Enjoy fast and secure transactions, reliable customer
-              support, and a wide selection of games.
+              {t(T.footer.potan_description)}
             </p>
           </div>
 
@@ -25,7 +28,9 @@ const Footer = () => {
             {/* Social Media Links */}
             <div className="order-2 sm:order-1">
               <div className="text-center">
-                <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
+                <h3 className="text-lg font-semibold mb-4">
+                  {t(T.footer.follow_us)}
+                </h3>
                 <div className="flex justify-center space-x-6">
                   <a
                     href="https://facebook.com"
@@ -57,11 +62,13 @@ const Footer = () => {
 
             {/* Quick Links */}
             <div className="order-1 sm:order-2 ps-0 sm:ps-20">
-              <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+              <h3 className="text-lg font-semibold mb-4">
+                {t(T.footer.quick_links)}
+              </h3>
               <ul className="text-sm text-gray-400 space-y-2">
                 <li>
                   <a href="/privacy-policy" className="hover:text-gray-300">
-                    Privacy Policy
+                    {t(T.footer.privacy_policy)}
                   </a>
                 </li>
                 <li>
@@ -69,12 +76,12 @@ const Footer = () => {
                     href="/terms-and-conditions"
                     className="hover:text-gray-300"
                   >
-                    Terms and Conditions
+                    {t(T.footer.terms_and_conditions)}
                   </a>
                 </li>
                 <li>
                   <a href="/contact" className="hover:text-gray-300">
-                    Contact Us
+                    {t(T.footer.contact_us)}
                   </a>
                 </li>
               </ul>
