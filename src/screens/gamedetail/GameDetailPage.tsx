@@ -31,7 +31,7 @@ function GameDetailPage() {
     if (gameId) {
       callApi("home/gameDetail")
         .withKeyParameter({ id: gameId })
-        .withHeaders({ "Accept-Language": language })
+        // .withHeaders({ "Accept-Language": language })
         .loadingGroup("gameDetail")
         .executeDispatch();
     }

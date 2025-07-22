@@ -26,7 +26,7 @@ const BannerCarousel: React.FC = () => {
 
   React.useEffect(() => {
     callApi("home/homeBanners")
-      .withHeaders({ "Accept-Language": language })
+      // .withHeaders({ "Accept-Language": language })
       .loadingGroup("homeLoading")
       .executeDispatch();
   }, [language]);

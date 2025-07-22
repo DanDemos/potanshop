@@ -13,7 +13,7 @@ export function App(): JSX.Element {
   useEffect(() => {
     (async () => {
       await callApi("setting/siteSetting")
-        .withHeaders({ "Accept-Language": language })
+        // .withHeaders({ "Accept-Language": language })
         .loadingGroup("siteLoading")
         .executeDispatch();
     })();

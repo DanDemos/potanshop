@@ -80,7 +80,7 @@ const HomePage = () => {
   useEffect(() => {
     (async () => {
       await callApi("home/gameList")
-        .withHeaders({ "Accept-Language": language })
+        // .withHeaders({ "Accept-Language": language })
         .loadingGroup(FirstTimeLoading ? "homeLoadingFirstTime" : "homeLoading")
         .executeDispatch();
     })();
