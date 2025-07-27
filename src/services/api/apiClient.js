@@ -1,13 +1,12 @@
-import { createApiThunk } from "../../redux/reducers/reducer";
-import { selectStore } from "../../lib/selectStore";
 import { endpoints } from "./endpoints";
 import storage from "redux-persist/lib/storage";
 import { GenerateID } from "../../lib/GenerateID";
 import { token_endpoint } from "../../helper/setAccessToken";
-import { loadingSlice } from "../../redux/reducers/reducer";
-import callAxios from "./axios";
+import { createApiThunk, loadingSlice } from "../../redux/reducers/reducer";
 import { token_key } from "../../helper/setAccessToken";
 import { dispatchStore } from "../../lib/dispatchStore";
+import { selectStore } from "../../lib/selectStore";
+import callAxios from "./axios";
 
 const callApi = (apiName) => {
   let uniqueAPI_id = null;
@@ -118,7 +117,7 @@ const callApi = (apiName) => {
 
       const getLocalStorage = async (apiGroup, endpointKey) => {
         const localstorage = await storage.getItem("persist:root");
-        endpointKey = endpointKey;
+        // endpointKey = endpointKey;
         if (localstorage) {
           const parsedLocalStorage = JSON.parse(localstorage);
           const check_data = parsedLocalStorage[apiGroup];

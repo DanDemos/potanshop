@@ -1,6 +1,14 @@
 import axios from "axios";
 import { API_URLs } from "./endpoints";
 
+interface Config {
+  method: string;
+  url?: string;
+  params?: Record<string, any>;
+  headers?: Record<string, string>;
+  data?: any;
+}
+
 // Determine the base URL based on the current environment
 const baseUrl =
   API_URLs[
@@ -17,7 +25,7 @@ function splitStringWithParams(inputString) {
 // Function to make the API call using Axios
 const callAxios = async (payload) => {
   // Create a config object with the URL and method
-  const config = {
+  const config: Config = {
     method: payload.endpoint.method,
   };
   if (payload.segment) {
@@ -86,7 +94,7 @@ const callAxios = async (payload) => {
         const match = item.match(/\{:(\w+)\}/); // Use regex to extract the key from {:key}
         if (match) {
           const key = match[1];
-          if (!obj.hasOwnProperty(key)) {
+          if (!Object.prototype.hasOwnProperty.call(obj, key)) {
             throw new Error(`${key} is missing when calling api ${baseUrl}/${payload.endpoint.endpoint}`);
           }
           else if (obj[key] == undefined || obj[key] == null || obj[key] == "") {

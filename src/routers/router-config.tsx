@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
-import LoginPage from "../screens/auth/LoginPage";
-import HomePage from "../screens/home/HomePage";
-import GameDetailPage from "../screens/gamedetail/GameDetailPage";
+import LoginPage from "../pages/auth/LoginPage";
+import HomePage from "../pages/home/HomePage";
+import GameDetailPage from "../pages/gamedetail/GameDetailPage";
 
 interface IRouteConfig {
   path: string;

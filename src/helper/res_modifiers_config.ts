@@ -5,7 +5,7 @@ export const SelectAccessTokenEndpoint = () => {
 }
 
 export const res_modifiers_config = {
-  getAccessToken: (res) => {
+  getAccessToken: (res:any) => {
     
     return res;
   }

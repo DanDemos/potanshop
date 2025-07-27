@@ -1,14 +1,14 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import callAxios from "../../services/api/axios";
 import { endpoints } from "../../services/api/endpoints";
-import { token_endpoint, FindAccessToken } from "../../helper/setAccessToken";
 import {
   isPendingAction,
   isFulfilledAction,
   isRejectedAction,
 } from "../actions/reduxActionHelpers";
-import trueTypeOf from "../../lib/trueTypeOf";
 import FrameSliceReducer from "../../helper/FrameSliceReducer";
+import { FindAccessToken, token_endpoint } from "../../helper/setAccessToken";
+import trueTypeOf from "../../lib/trueTypeOf";
+import callAxios from "../../services/api/axios";
 
 export const createApiThunk = (thunkName, payload, loadingData) =>
   createAsyncThunk(`${thunkName}`, async (data, thunkAPI) => {
@@ -70,13 +70,16 @@ Object.entries(endpoints).forEach(([key]) => {
                 : action.payload,
           },
         }))
-        .addMatcher(isRejectedAction(`${key}/`), (state, action) => ({
-          ...state,
-          [`${action.type.split("/")[1]}`]: {
-            frame_status: "failed",
-            error: action.error.message,
-          },
-        }));
+        .addMatcher(isRejectedAction(`${key}/`), (state, action) => {
+          const err = (action as any).error?.message ?? "Unknown error";
+          return {
+            ...state,
+            [`${action.type.split("/")[1]}`]: {
+              frame_status: "failed",
+              error: err,
+            },
+          };
+        });
     },
   });
 });

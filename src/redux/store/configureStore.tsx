@@ -33,10 +33,13 @@ type DynamicSlices = {
   [K in keyof typeof CustomSlice]: ReturnType<typeof CustomSlice[K]['reducer']>;
 };
 
+type SliceMap = Record<string, { reducer: any }>
+const typedSlice = slice as SliceMap;
+
 // Combine the reducers from the 'slice' object
 const obj = {
   [AccessTokenSlice.name]: AccessTokenSlice.reducer,
-  ...Object.fromEntries(Object.entries(slice)?.map(([key, { reducer }]) => [key, reducer])),
+  ...Object.fromEntries(Object.entries(typedSlice)?.map(([key, { reducer }]) => [key, reducer])),
   ...Object.fromEntries(Object.entries(CustomSlice)?.map(([key, { reducer }]) => [key, reducer])),
   [loadingSlice.name]: loadingSlice.reducer,
 }
