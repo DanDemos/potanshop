@@ -16,7 +16,7 @@ export function GameDetailCarousel(): JSX.Element {
   };
 
   const gameDetail = useSelector(
-    (state: RootState) => state?.home?.gameList?.data
+    (state: RootState) => state?.home?.gameDetail?.data
   );
 
   return (

@@ -20,7 +20,7 @@ import { RootState } from "../../redux/store/configureStore";
 function GameDetailPage() {
   const { t, T } = useTypedTranslation();
   const [searchParams] = useSearchParams();
-  const gameId = searchParams.get("id");
+  const gameSlug = searchParams.get("id");
 
   const language = useSelector((state: RootState) => state.languageSlice);
   const gameDetail = useSelector(
@@ -28,14 +28,14 @@ function GameDetailPage() {
   );
 
   useEffect(() => {
-    if (gameId) {
+    if (gameSlug) {
       callApi("home/gameDetail")
-        .withKeyParameter({ id: gameId })
+        .withKeyParameter({ id: gameSlug })
         // .withHeaders({ "Accept-Language": language })
         .loadingGroup("gameDetail")
         .executeDispatch();
     }
-  }, [gameId]);
+  }, [gameSlug]);
 
   return (
     <DefaultLayout>

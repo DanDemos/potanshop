@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-
+import SnowFlakePNG from "../../assets/snowflake.png"
 const SnowflakesEffect = (): null => {
   useEffect(() => {
     const snowflakesContainer = document.createElement("div");
@@ -16,9 +16,6 @@ const SnowflakesEffect = (): null => {
     let lastTime = 0; // Keep track of the last time snowflake was created
     const interval = 50; // Time interval in ms to limit snowflakes frequency (larger = less frequent)
 
-    // Replace this with your snowflake PNG URL
-    const snowflakeImageUrl = "/src/assets/snowflake.png";
-
     // Function to create snowflakes
     const createSnowflake = (x:number, y:number) => {
       const random = Math.random() * 3 + 1;
@@ -29,7 +26,7 @@ const SnowflakesEffect = (): null => {
       snowflake.style.height = `${size}px`;
       snowflake.style.left = `${x - size / 2}px`; // Center the snowflake on the mouse
       snowflake.style.top = `${y - size / 2}px`; // Center the snowflake on the mouse
-      snowflake.style.backgroundImage = `url(${snowflakeImageUrl})`;
+      snowflake.style.backgroundImage = `url(${SnowFlakePNG})`;
       snowflake.style.backgroundSize = "cover"; // Make sure the image fits the snowflake container
       snowflake.style.backgroundPosition = "center";
       snowflake.style.animationDuration = `${random}s`;

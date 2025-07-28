@@ -108,7 +108,7 @@ const HomePage = () => {
                 <Link
                   key={key}
                   className="group relative flex flex-col justify-between p-3 sm:p-0 bg-white shadow-md hover:scale-[98%] transition-scale duration-200 ease-in-out"
-                  to={`/game-detail?id=${game?.id}`}
+                  to={`/game-detail?id=${game?.slug}`}
                   onClick={(e) => {}}
                   aria-disabled={false}
                   tabIndex={0}
