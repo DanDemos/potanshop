@@ -103,7 +103,7 @@ const HomePage = () => {
           </h2>
           <div className="max-w-4xl grid grid-cols-3 sm:grid-cols-5 sm:gap-5 gap-3 select-none">
             {/* Hot Game Item */}
-            {gameList?.data?.map((game: any, key: number) => {
+            {gameList?.map((game: any, key: number) => {
               return (
                 <Link
                   key={key}
@@ -127,7 +127,7 @@ const HomePage = () => {
 
                   <img
                     src={game?.game_icon}
-                    alt="Hot Product 1"
+                    alt="Game Icon"
                     className="w-full rounded-t-xl object-cover mx-auto"
                   />
                   <div className="my-2">
@@ -156,7 +156,7 @@ const HomePage = () => {
                 title: t(T.home.games.summoners_war),
               },
               {
-                img: "https://play-lh.googleusercontent.com/mMlDm75bTphvVBGP9bW-JN-3ejks1yEv9rXlz9n0SRNvtS6h4tWZeULwoel-BiXOMJE",
+                img: "https://play-lh.googleusercontent.com/4b8E4y0776rFq9cUJTLjUnZAjRa2nd9kjGD_HH4sOYbKaEMsMPh3YCXVQ1871dBDtxIi",
                 title: t(T.home.games.league_of_legend),
               },
               {
@@ -184,7 +184,7 @@ const HomePage = () => {
               >
                 <img
                   src={game.img}
-                  alt="Hot Product 1"
+                  alt="Game Icon"
                   className="w-full rounded-t-xl object-cover mx-auto"
                 />
                 <div className="my-2">
@@ -266,7 +266,7 @@ const HomePage = () => {
                 </div>
                 <img
                   src={product.img}
-                  alt="Hot Product 1"
+                  alt="Game Icon"
                   className="object-cover rounded-xl mx-auto"
                 />
 

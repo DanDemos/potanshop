@@ -33,7 +33,7 @@ const BannerCarousel: React.FC = () => {
 
   return (
     <Slider {...settings}>
-      {homeBanners?.data?.map((each: any, key: number) => (
+      {homeBanners?.map((each: any, key: number) => (
         <div key={key} className="relative w-full h-full">
           <img
             src={each?.banner_image}

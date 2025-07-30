@@ -36,14 +36,14 @@ const Header = () => {
         {/* Logo */}
         <Link to={"/"} className="text-2xl font-extrabold tracking-tight">
           <div className="flex items-center gap-1">
-            {siteSetting?.data?.site_logo && (
+            {siteSetting?.site_logo && (
               <img
                 className="w-[35px] h-[35px]"
-                src={siteSetting?.data?.site_logo}
+                src={siteSetting?.site_logo}
                 alt="Site Logo"
               />
             )}
-            <span className="text-sky-500">{siteSetting?.data?.site_name}</span>
+            <span className="text-sky-500">{siteSetting?.site_name}</span>
           </div>
         </Link>
 
