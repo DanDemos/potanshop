@@ -26,21 +26,29 @@ export function GameDetailCarousel(): JSX.Element {
           {" "}
           {/* Carousel takes 2/3 of the screen width */}
           <Slider {...settings}>
-            <div className="relative w-full h-full">
-              <img
-                src={
-                  "https://play-lh.googleusercontent.com/2DGT6oNwvLpbiCuAL89jWdc3B1hFBx8dXHOTVsaToouE6uCmSHynk9cQSwPlbwvP2w=w1052-h592"
-                }
-                alt="Banner 1"
-                className="object-cover w-full h-full"
-              />
-              <div className="absolute inset-0 bg-black opacity-30"></div>
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center">
-                <h2 className="text-4xl font-bold">Welcome to Our Store</h2>
-                <p className="mt-4 text-xl">Shop the best deals today</p>
-              </div>
-            </div>
+            {gameDetail?.banner?.map((eachBanner, key) => {
+  console.log(gameDetail?.description, "eachBanner")
 
+              return (
+                <div key={key} className="relative w-full h-full">
+                  <img
+                    src={eachBanner?.banner_image}
+                    alt="Banner 1"
+                    className="object-cover w-full h-full"
+                  />
+                  <div className="absolute inset-0 bg-black opacity-30"></div>
+                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center">
+                    <h2 className="text-4xl font-bold">
+                      {eachBanner?.banner_title}
+                    </h2>
+                    <p className="mt-4 text-xl">
+                      {eachBanner?.banner_description}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
+            {/* 
             <div className="relative w-full h-full">
               <img
                 src={
@@ -71,7 +79,7 @@ export function GameDetailCarousel(): JSX.Element {
                 <h2 className="text-4xl font-bold">New Arrivals</h2>
                 <p className="mt-4 text-xl">Fresh products just for you</p>
               </div>
-            </div>
+            </div> */}
           </Slider>
         </div>
 
@@ -81,7 +89,7 @@ export function GameDetailCarousel(): JSX.Element {
           <h3 className="text-md font-bold mb-2">
             {gameDetail?.data?.game_title}
           </h3>
-          <p className="text-xs">{gameDetail?.data?.description}</p>
+          <div className="line-clamp-[20] overflow-hidden text-ellipsis" dangerouslySetInnerHTML={{ __html: gameDetail?.description }} />
         </div>
       </div>
     </div>
