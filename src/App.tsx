@@ -26,7 +26,7 @@ export function App(): JSX.Element {
       document.createElement("link");
 
     link.rel = "icon";
-    if (siteSetting?.data?.fav_icon) link.href = siteSetting?.data?.fav_icon;
+    if (siteSetting?.fav_icon) link.href = siteSetting?.fav_icon;
     document.head.appendChild(link);
   }, [siteSetting]);
 

@@ -89,7 +89,7 @@ export function GameDetailCarousel(): JSX.Element {
           <h3 className="text-md font-bold mb-2">
             {gameDetail?.data?.game_title}
           </h3>
-          <div className="line-clamp-[20] overflow-hidden text-ellipsis" dangerouslySetInnerHTML={{ __html: gameDetail?.description }} />
+          <div className="line-clamp-[17] overflow-hidden text-ellipsis" dangerouslySetInnerHTML={{ __html: gameDetail?.description }} />
         </div>
       </div>
     </div>
