@@ -19,6 +19,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "react-toastify";
 import ToastComponent from "../../components/toast/ToastComponent";
 import { FaViber } from "react-icons/fa";
+import Button from "../../components/Button";
 
 const defaultOptions = {
   reverse: false, // reverse the tilt direction
@@ -82,7 +83,7 @@ function ContactPage() {
       <div className="bg-w-full bg-no-repeat bg-center bg-cover">
         <div className="w-full min-h-screen flex flex-wrap justify-center items-center p-[15px] bg-sky-500">
           <div
-            className="w-[1163px] bg-white rounded-[10px] overflow-hidden flex flex-wrap justify-between 
+            className="w-[1163px] bg-white overflow-hidden flex flex-wrap justify-between 
             pt-[110px] pb-[157px] pl-[148px] pr-[130px]
             max-[992px]:pl-[90px] max-[992px]:pr-[80px]
             max-[768px]:pl-[80px] max-[768px]:pr-[80px]
@@ -115,7 +116,7 @@ function ContactPage() {
               <div className="group relative w-full z-[1] mb-[10px]">
                 <input
                   className="block w-full bg-[#e6e6e6] font-bold text-[15px] 
-                  leading-[1.5] text-[#666666] h-[50px] rounded-[25px] 
+                  leading-[1.5] text-[#666666] h-[50px] 
                   pt-0 pr-[30px] pb-0 pl-[50px] outline-none border-0 
                 focus:text-sky-500 peer"
                   type="text"
@@ -123,9 +124,9 @@ function ContactPage() {
                   placeholder={t(T.main.name)}
                   {...register("name")}
                 />
-                <span className="block absolute rounded-[25px] bottom-0 left-0 w-full h-full text-sky-500 pl-[22px] peer-focus:animate-anim-shadow -z-[1]"></span>
+                <span className="block absolute bottom-0 left-0 w-full h-full text-sky-500 pl-[22px] peer-focus:animate-anim-shadow -z-[1]"></span>
                 <span
-                  className="flex items-center absolute rounded-[25px] bottom-0 left-0
+                  className="flex items-center absolute bottom-0 left-0
                   w-full h-full pl-[30px] pointer-events-none
                   text-[#aaaaaa] text-[15px]
                   transition-all duration-400 peer-focus:ps-[22px] peer-focus:text-sky-500"
@@ -156,15 +157,15 @@ function ContactPage() {
 
               <div className="group relative w-full z-[1] mb-[10px]">
                 <input
-                  className="block w-full bg-[#e6e6e6] font-bold text-[15px] leading-[1.5] text-[#666666] h-[50px] rounded-[25px] pt-0 pr-[30px] pb-0 pl-[54px] outline-none border-0 focus:text-sky-500 peer"
+                  className="block w-full bg-[#e6e6e6] font-bold text-[15px] leading-[1.5] text-[#666666] h-[50px] pt-0 pr-[30px] pb-0 pl-[54px] outline-none border-0 focus:text-sky-500 peer"
                   type="text"
                   name="phone"
                   placeholder={t(T.main.phone)}
                   {...register("phone")}
                 />
-                <span className="block absolute rounded-[25px] bottom-0 left-0 w-full h-full text-sky-500 pl-[22px] peer-focus:animate-anim-shadow -z-[1]"></span>
+                <span className="block absolute bottom-0 left-0 w-full h-full text-sky-500 pl-[22px] peer-focus:animate-anim-shadow -z-[1]"></span>
                 <span
-                  className="flex items-center absolute rounded-[25px] bottom-0 left-0
+                  className="flex items-center absolute bottom-0 left-0
                   w-full h-full pl-[30px] pointer-events-none
                   text-[#aaaaaa] text-[15px]
                   transition-all duration-400 peer-focus:ps-[22px] peer-focus:text-sky-500"
@@ -195,12 +196,12 @@ function ContactPage() {
 
               <div className="group relative w-full z-[1] mb-[10px]">
                 <textarea
-                  className="block w-full bg-[#e6e6e6] font-bold text-[15px] leading-[1.5] text-[#666666] h-[50px] rounded-[25px] min-h-[150px] py-[14px] px-[30px] outline-none border-0 focus:text-sky-500 peer"
+                  className="block w-full bg-[#e6e6e6] font-bold text-[15px] leading-[1.5] text-[#666666] h-[50px] min-h-[150px] py-[14px] px-[30px] outline-none border-0 focus:text-sky-500 peer"
                   name="message"
                   placeholder={t(T.main.message)}
                   {...register("message")}
                 ></textarea>
-                <span className="block absolute rounded-[25px] bottom-0 left-0 w-full h-full text-sky-500 pl-[22px] peer-focus:animate-anim-shadow -z-[1]"></span>
+                <span className="block absolute bottom-0 left-0 w-full h-full text-sky-500 pl-[22px] peer-focus:animate-anim-shadow -z-[1]"></span>
 
                 {errors?.message && (
                   <>
@@ -223,11 +224,9 @@ function ContactPage() {
                 )}
               </div>
 
-              <div className="w-full flex flex-wrap justify-center pt-[20px]">
-                <button className="w-full h-[50px] rounded-[25px] bg-sky-500 font-bold text-[15px] leading-[1.5] text-white flex justify-center items-center px-[25px] transition-all duration-400 hover:bg-[#333333]">
+                <Button className="w-full">
                   {t(T.contact.send)}
-                </button>
-              </div>
+                </Button>
             </form>
           </div>
         </div>
