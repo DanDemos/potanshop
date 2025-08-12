@@ -109,7 +109,7 @@ function ContactPage() {
                 className="block font-[Montserrat-ExtraBold] 
                 text-[24px] text-[#333333] leading-[1.2] text-left pb-[36px]"
               >
-                Get in touch
+                {t(T.contact.get_in_touch)}
               </span>
 
               <div className="group relative w-full z-[1] mb-[10px]">
@@ -120,7 +120,7 @@ function ContactPage() {
                 focus:text-sky-500 peer"
                   type="text"
                   name="name"
-                  placeholder="Name"
+                  placeholder={t(T.main.name)}
                   {...register("name")}
                 />
                 <span className="block absolute rounded-[25px] bottom-0 left-0 w-full h-full text-sky-500 pl-[22px] peer-focus:animate-anim-shadow -z-[1]"></span>
@@ -159,7 +159,7 @@ function ContactPage() {
                   className="block w-full bg-[#e6e6e6] font-bold text-[15px] leading-[1.5] text-[#666666] h-[50px] rounded-[25px] pt-0 pr-[30px] pb-0 pl-[54px] outline-none border-0 focus:text-sky-500 peer"
                   type="text"
                   name="phone"
-                  placeholder="Phone"
+                  placeholder={t(T.main.phone)}
                   {...register("phone")}
                 />
                 <span className="block absolute rounded-[25px] bottom-0 left-0 w-full h-full text-sky-500 pl-[22px] peer-focus:animate-anim-shadow -z-[1]"></span>
@@ -169,10 +169,7 @@ function ContactPage() {
                   text-[#aaaaaa] text-[15px]
                   transition-all duration-400 peer-focus:ps-[22px] peer-focus:text-sky-500"
                 >
-                  <FaViber
-                    size={18}
-                  />
-                  
+                  <FaViber size={18} />
                 </span>
 
                 {errors?.phone && (
@@ -200,7 +197,7 @@ function ContactPage() {
                 <textarea
                   className="block w-full bg-[#e6e6e6] font-bold text-[15px] leading-[1.5] text-[#666666] h-[50px] rounded-[25px] min-h-[150px] py-[14px] px-[30px] outline-none border-0 focus:text-sky-500 peer"
                   name="message"
-                  placeholder="Message"
+                  placeholder={t(T.main.message)}
                   {...register("message")}
                 ></textarea>
                 <span className="block absolute rounded-[25px] bottom-0 left-0 w-full h-full text-sky-500 pl-[22px] peer-focus:animate-anim-shadow -z-[1]"></span>
@@ -228,7 +225,7 @@ function ContactPage() {
 
               <div className="w-full flex flex-wrap justify-center pt-[20px]">
                 <button className="w-full h-[50px] rounded-[25px] bg-sky-500 font-bold text-[15px] leading-[1.5] text-white flex justify-center items-center px-[25px] transition-all duration-400 hover:bg-[#333333]">
-                  Send
+                  {t(T.contact.send)}
                 </button>
               </div>
             </form>

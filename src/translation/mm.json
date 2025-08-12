@@ -52,7 +52,15 @@
   },
   "main": {
     "error": "Error",
-    "unexpected_error": "မမျှော်လင့်ထားသော Error တစ်ခုဖြစ်သွားပါသည်"
+    "unexpected_error": "မမျှော်လင့်ထားသော Error တစ်ခုဖြစ်သွားပါသည်",
+    "name": "အမည်",
+    "phone": "ဖုန်းနံပါတ်",
+    "email": "အီးမေးလ်",
+    "message": "အကြောင်းအရာ"
+  },
+  "contact":{
+    "get_in_touch": "ကျွန်တော်တို့ကို ဆက်သွယ်လိုက်ပါ",
+    "send": "ပို့မည်"
   },
   "footer": {
     "about_potan": "PotanShop အကြောင်း",

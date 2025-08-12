@@ -52,7 +52,15 @@
   },
   "main": {
     "error": "Error",
-    "unexpected_error": "Unexpected Error"
+    "unexpected_error": "Unexpected Error",
+    "name": "Name",
+    "phone": "Phone",
+    "email": "Email",
+    "message": "Message"
+  },
+  "contact":{
+    "get_in_touch": "Get in touch",
+    "send": "Send"
   },
   "footer": {
     "about_potan": "About PotanShop",
