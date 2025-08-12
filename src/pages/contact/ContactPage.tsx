@@ -1,18 +1,6 @@
-import Button from "../../components/Button";
-import GameDetailCarousel from "../../components/GameDetailCarousel";
-import FirePng from "../../assets/fire.png";
-import Dia0Png from "../../assets/dia0.webp";
-import Dia1Png from "../../assets/dia1.webp";
-import Dia2Png from "../../assets/dia2.webp";
-import Dia3Png from "../../assets/dia3.webp";
-import Dia4Png from "../../assets/dia4.webp";
 import ContactImg from "../../assets/contact-img.png";
-// import Dia5Png from "../../assets/dia5.webp"
-import Dia6Png from "../../assets/dia6.webp";
 import DefaultLayout from "../../layout/DefaultLayout";
 import { useTypedTranslation } from "../../translation/useTypedTranslation";
-import { useSelector } from "react-redux";
-import { useEffect } from "react";
 import callApi from "../../services/api/apiClient";
 import { useSearchParams } from "react-router-dom";
 import BenefitsComponent from "../../components/BenefitsComponent";
@@ -30,6 +18,7 @@ import { ContactFormData, contactSchema } from "./contactSchema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "react-toastify";
 import ToastComponent from "../../components/toast/ToastComponent";
+import { FaViber } from "react-icons/fa";
 
 const defaultOptions = {
   reverse: false, // reverse the tilt direction
@@ -180,7 +169,10 @@ function ContactPage() {
                   text-[#aaaaaa] text-[15px]
                   transition-all duration-400 peer-focus:ps-[22px] peer-focus:text-sky-500"
                 >
-                  <FontAwesomeIcon icon={faPhone} />
+                  <FaViber
+                    size={18}
+                  />
+                  
                 </span>
 
                 {errors?.phone && (
@@ -194,45 +186,6 @@ function ContactPage() {
                     >
                       {errors?.phone?.message
                         ? errors?.phone?.message
-                        : "Unexpected Error"}
-                    </span>
-                    <FontAwesomeIcon
-                      icon={faCircleExclamation}
-                      className="block absolute text-red-500 top-[50%] transform translate-y-[-50%] right-[13px]"
-                    />
-                  </>
-                )}
-              </div>
-
-              <div className="group relative w-full z-[1] mb-[10px]">
-                <input
-                  className="block w-full bg-[#e6e6e6] font-bold text-[15px] leading-[1.5] text-[#666666] h-[50px] rounded-[25px] pt-0 pr-[30px] pb-0 pl-[54px] outline-none border-0 focus:text-sky-500 peer"
-                  type="text"
-                  name="email"
-                  placeholder="Email"
-                  {...register("email")}
-                />
-                <span className="block absolute rounded-[25px] bottom-0 left-0 w-full h-full text-sky-500 pl-[22px] peer-focus:animate-anim-shadow -z-[1]"></span>
-                <span
-                  className="flex items-center absolute rounded-[25px] bottom-0 left-0
-                  w-full h-full pl-[30px] pointer-events-none
-                  text-[#aaaaaa] text-[15px]
-                  transition-all duration-400 peer-focus:ps-[22px] peer-focus:text-sky-500"
-                >
-                  <FontAwesomeIcon icon={faEnvelopeOpen} />
-                </span>
-
-                {errors?.email && (
-                  <>
-                    <span
-                      className="absolute max-w-[70%] bg-white border 
-                    border-red-500 rounded-full py-1 px-[30px] pl-[10px] top-1/2
-                      right-2 pointer-events-none cursor-default font-medium text-red-500 text-[13px] 
-                      leading-[1.4] text-left opacity-0 group-hover:opacity-100 
-                      transition-opacity duration-300 ease-in-out transform translate-y-[-50%]"
-                    >
-                      {errors?.email?.message
-                        ? errors?.email?.message
                         : "Unexpected Error"}
                     </span>
                     <FontAwesomeIcon

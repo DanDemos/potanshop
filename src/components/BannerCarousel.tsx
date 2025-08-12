@@ -13,9 +13,18 @@ const settings = {
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 1000,
+  autoplaySpeed: 4000,
   arrows: true,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        arrows: false,
+      },
+    },
+  ],
 };
+
 const BannerCarousel: React.FC = () => {
   const { t, T } = useTypedTranslation();
 
@@ -26,7 +35,7 @@ const BannerCarousel: React.FC = () => {
 
   React.useEffect(() => {
     callApi("home/homeBanners")
-      // .withHeaders({ "Accept-Language": language })
+      .withHeaders({ "Accept-Language": language })
       .loadingGroup("homeLoading")
       .executeDispatch();
   }, [language]);
@@ -40,7 +49,7 @@ const BannerCarousel: React.FC = () => {
             alt="Banner 1"
             className="object-cover w-full h-full"
           />
-          <div className="absolute inset-0 bg-black opacity-50"></div>
+          <div className="absolute inset-0 bg-black opacity-[5%]"></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center">
             <h2 className="text-lg sm:text-4xl font-bold">
               {each?.banner_title}
