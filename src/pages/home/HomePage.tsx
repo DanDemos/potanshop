@@ -70,7 +70,6 @@ const DelayedSlider = ({
 };
 
 const HomePage = () => {
-  const [FirstTimeLoading, setFirstTimeLoading] = useState(true);
   const { t, T } = useTypedTranslation();
   const location = useLocation();
 
@@ -82,16 +81,13 @@ const HomePage = () => {
     (async () => {
       await callApi("home/gameList")
         // .withHeaders({ "Accept-Language": language })
-        .loadingGroup(FirstTimeLoading ? "homeLoadingFirstTime" : "homeLoading")
+        .loadingGroup("homeLoading")
         .executeDispatch();
     })();
-    if (FirstTimeLoading === true) {
-      setFirstTimeLoading(false);
-    }
   }, [language]);
 
   return (
-    <DefaultLayout loadingGroup={"homeLoadingFirstTime"}>
+    <DefaultLayout loadingGroup={"homeLoading"}>
       {/* Hero Section */}
       <BannerCarousel />
 

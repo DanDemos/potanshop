@@ -32,13 +32,13 @@ function GameDetailPage() {
       callApi("home/gameDetail")
         .withKeyParameter({ id: gameSlug })
         // .withHeaders({ "Accept-Language": language })
-        .loadingGroup("gameDetail")
+        .loadingGroup("homeLoading")
         .executeDispatch();
     }
   }, [gameSlug]);
 
   return (
-    <DefaultLayout>
+    <DefaultLayout loadingGroup={"homeLoading"}>
       {/* Hero Section */}
       <GameDetailCarousel />
 
