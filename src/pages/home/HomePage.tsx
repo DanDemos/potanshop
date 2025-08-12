@@ -79,11 +79,11 @@ const HomePage = () => {
 
   const language = useSelector((state: RootState) => state?.languageSlice);
   const gameList = useSelector(
-    (state: RootState) => state?.home?.gameList?.data
+    (state: RootState) => state?.game?.list?.data
   );
   useEffect(() => {
     (async () => {
-      await callApi("home/gameList")
+      await callApi("game/list")
         // .withHeaders({ "Accept-Language": language })
         .loadingGroup("homeLoading")
         .executeDispatch();

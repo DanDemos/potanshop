@@ -25,14 +25,14 @@ export const endpointExamples = {
   getWithPathParam: {
     method: "get",
     endpoint: "game/{:id}"
-    // Usage: callApi("home/gameDetail").withKeyParameter({ id: 123 }).executeDispatch()
+    // Usage: callApi("game/detail").withKeyParameter({ id: 123 }).executeDispatch()
   },
 
   // GET WITH QUERY PARAMETERS
   getWithQueryParams: {
     method: "get",
     endpoint: "games"
-    // Usage: callApi("home/gameList").withParam({ page: 1, limit: 10 }).executeDispatch()
+    // Usage: callApi("game/list").withParam({ page: 1, limit: 10 }).executeDispatch()
   },
 
   // POST WITH BODY AND TOKEN
@@ -101,10 +101,10 @@ export const endpointExamples = {
  *    callApi("home/promotion").executeDispatch()
  * 
  * 2. GET with path parameter:
- *    callApi("home/gameDetail").withKeyParameter({ id: 123 }).executeDispatch()
+ *    callApi("game/detail").withKeyParameter({ id: 123 }).executeDispatch()
  * 
  * 3. GET with query parameters:
- *    callApi("home/gameList").withParam({ page: 1, limit: 10 }).executeDispatch()
+ *    callApi("game/list").withParam({ page: 1, limit: 10 }).executeDispatch()
  * 
  * 4. POST with body:
  *    callApi("auth/login").withBody({ email: "user@example.com", password: "password" }).executeDispatch()

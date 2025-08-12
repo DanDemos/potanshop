@@ -19,13 +19,19 @@ export const endpoints = Object.freeze({
       // token: "optional", // require, optional
       // expire_in: 10
     },
-    gameList: {
+  },
+  game: {
+    list: {
       method: "get",
       endpoint: "games",
     },
-    gameDetail: {
+    detail: {
       method: "get",
       endpoint: "game/{:id}",
+    },
+    productList: {
+      method: "get",
+      endpoint: "products/{:id}",
     }
   },
   setting: {

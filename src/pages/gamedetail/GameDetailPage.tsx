@@ -24,13 +24,21 @@ function GameDetailPage() {
 
   const language = useSelector((state: RootState) => state.languageSlice);
   const gameDetail = useSelector(
-    (state: RootState) => state?.home?.gameDetail?.data
+    (state: RootState) => state?.game?.detail?.data
   );
-
+  const gameProductList = useSelector(
+    (state: RootState) => state?.game?.productList?.data
+  );
   useEffect(() => {
     if (gameSlug) {
-      callApi("home/gameDetail")
+      callApi("game/detail")
         .withKeyParameter({ id: gameSlug })
+        // .withHeaders({ "Accept-Language": language })
+        .loadingGroup("homeLoading")
+        .executeDispatch();
+
+      callApi("game/productList")
+        .withKeyParameter({ id: "mobilelegends" })
         // .withHeaders({ "Accept-Language": language })
         .loadingGroup("homeLoading")
         .executeDispatch();
@@ -49,47 +57,10 @@ function GameDetailPage() {
             <img className="w-7 h-6 me-1" src={FirePng} alt="fire icon" />
             {t(T.game_detail.hot_products)}
           </h2>
-          <div className="max-w-4xl grid grid-cols-3 sm:grid-cols-6 sm:gap-5 gap-2 select-none">
-            {[
-              {
-                id: 0,
-                imageSrc: Dia0Png,
-                title: "Twilight Pass",
-                price: "$8.99",
-              },
-              {
-                id: 1,
-                imageSrc: Dia6Png,
-                title: "Weekly Diamond Pass",
-                price: "$1.89",
-              },
-              {
-                id: 2,
-                imageSrc: Dia1Png,
-                title: "56 Diamonds",
-                price: "$0.89",
-              },
-              {
-                id: 3,
-                imageSrc: Dia2Png,
-                title: "112 Diamonds",
-                price: "$1.77",
-              },
-              {
-                id: 4,
-                imageSrc: Dia3Png,
-                title: "168 Diamonds",
-                price: "$2.65",
-              },
-              {
-                id: 5,
-                imageSrc: Dia4Png,
-                title: "224 Diamonds",
-                price: "$3.54",
-              },
-            ]?.map(({ id, imageSrc, title, price }) => (
+          <div className="max-w-4xl grid grid-cols-3 sm:grid-cols-5 sm:gap-5 gap-2 select-none">
+            {gameProductList?.map((eachGameProduct, key) => (
               <div
-                key={id}
+                key={key}
                 className="group relative flex flex-col justify-between items-center bg-white p-3 rounded-xl shadow-md hover:scale-[98%] transition-scale duration-200 ease-in-out"
               >
                 <div className="absolute -right-[0.313rem] -top-[0.313rem] z-[1] overflow-hidden w-[4.688rem] h-[4.688rem] text-right">
@@ -102,13 +73,13 @@ function GameDetailPage() {
                   </span>
                 </div>
                 <img
-                  src={imageSrc}
-                  alt={title}
+                  src={eachGameProduct?.product_icon}
+                  alt={eachGameProduct?.name}
                   className="object-cover rounded-xl mx-auto"
                 />
                 <div className="my-2">
-                  <h3 className="font-semibold text-sm mb-1">{title}</h3>
-                  <p className="text-gray-600">{price}</p>
+                  <h3 className="font-semibold text-sm mb-1">{eachGameProduct?.name}</h3>
+                  <p className="text-gray-600">{eachGameProduct?.price} MMK</p>
                 </div>
                 <Button
                   className="group w-full h-[30px] mx-auto"
