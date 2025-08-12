@@ -34,6 +34,12 @@ export const endpoints = Object.freeze({
       endpoint: "site-settings",
     },
   },
+  contact: {
+    submit:{
+      method: "post",
+      endpoint: "contact"
+    }
+  }
 });
 
 

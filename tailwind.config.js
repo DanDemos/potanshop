@@ -8,6 +8,8 @@ export default {
       },
       animation: {
         reflection: 'reflection 2s linear infinite', // Continuous left to right animation
+        'anim-shadow': 'anim-shadow 0.5s ease-in-out forwards',
+
       },
       keyframes: {
         reflection: {
@@ -18,12 +20,25 @@ export default {
             left: '100%', // End at right outside
           },
         },
+        'anim-shadow': {
+          '0%': {
+            boxShadow: '0px 0px 0px 0px',
+            opacity: '1',
+          },
+          '100%': {
+            boxShadow: '0px 0px 60px 25px',
+            opacity: '0',
+          },
+        },
       },
       boxShadow: {
         'frosted': 'inset 0 0 2000px rgba(255, 255, 255, 0.5)',
       },
       backdropBlur: {
         'md': '10px',
+      },
+      transitionTimingFunction: {
+        'cubicbezier-ease': 'cubic-bezier(0.03, 0.98, 0.52, 0.99)',
       },
     },
   },
@@ -77,7 +92,7 @@ export default {
           // filter: 'blur(10px)',
           // margin: '-7px',
         },
-        
+
       });
     },
   ],

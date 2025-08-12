@@ -23,7 +23,7 @@ const generateTypedKeys = <T extends Record<string, any>>(
     if (typeof obj[key] === 'object' && obj[key] !== null) {
       result[key] = generateTypedKeys(obj[key], fullKey);
     } else {
-      result[key] = fullKey;
+      (result[key] as string) = fullKey;
     }
   }
   

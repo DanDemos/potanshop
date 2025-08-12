@@ -18,6 +18,7 @@ import callApi from "../../services/api/apiClient";
 import Slider from "react-slick";
 import DefaultLayout from "../../layout/DefaultLayout";
 import BenefitsComponent from "../../components/BenefitsComponent";
+import ToastComponent from "../../components/toast/ToastComponent";
 
 const settings = {
   dots: false,
@@ -171,12 +172,10 @@ const HomePage = () => {
                 onClick={(e) => {
                   e.preventDefault();
                   toast.warn(
-                    <div className="flex flex-col gap-0 ms-2">
-                      <h1 className="text-sm font-semibold">
-                        {t(T.home.coming_soon)}
-                      </h1>
-                      <p className="text-xs">{t(T.home.under_construction)}</p>
-                    </div>
+                    <ToastComponent
+                      title={t(T.home.coming_soon)}
+                      description={t(T.home.under_construction)}
+                    />
                   );
                 }}
                 aria-disabled="true"
@@ -194,14 +193,10 @@ const HomePage = () => {
                   className="group w-full h-[40px] mx-auto"
                   onClick={() => {
                     toast.warn(
-                      <div className="flex flex-col gap-0 ms-2">
-                        <h1 className="text-sm font-semibold">
-                          {t(T.home.coming_soon)}
-                        </h1>
-                        <p className="text-xs">
-                          {t(T.home.under_construction)}
-                        </p>
-                      </div>
+                      <ToastComponent
+                        title={t(T.home.coming_soon)}
+                        description={t(T.home.under_construction)}
+                      />
                     );
                   }}
                   disabled

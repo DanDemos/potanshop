@@ -2,6 +2,7 @@ import { ReactElement } from "react";
 import LoginPage from "../pages/auth/LoginPage";
 import HomePage from "../pages/home/HomePage";
 import GameDetailPage from "../pages/gamedetail/GameDetailPage";
+import ContactPage from "../pages/contact/ContactPage";
 
 interface IRouteConfig {
   path: string;
@@ -22,5 +23,9 @@ export const RouteConfig: IRouteConfig[] = [
   {
     path: "/game-detail",
     element: <GameDetailPage />
+  },
+  {
+    path: "/contact",
+    element: <ContactPage />
   }
 ];

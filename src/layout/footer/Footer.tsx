@@ -95,7 +95,7 @@ export function Footer(): JSX.Element {
             <input
               type="email"
               placeholder="Enter your email"
-              className="bg-gray-800 text-white px-4 py-2 w-full rounded-lg border border-gray-700 focus:outline-none focus:border-sky-500"
+              className="bg-gray-800 text-white px-4 py-2 w-full rounded-lg border border-gray-700 focus:outline-none focus:border-skyblue"
             />
             <button className="w-full mt-4 py-2 px-4 bg-sky-600 text-white rounded-lg hover:bg-sky-700">
               Subscribe

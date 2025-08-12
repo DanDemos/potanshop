@@ -50,6 +50,10 @@
     "hot": "Hot",
     "buy_now": "Buy Now"
   },
+  "main": {
+    "error": "Error",
+    "unexpected_error": "Unexpected Error"
+  },
   "footer": {
     "about_potan": "About PotanShop",
     "potan_description": "PotanShop is your one-stop online store for in-game currency and accessories. Enjoy fast and secure transactions, reliable customer support, and a wide selection of games.",

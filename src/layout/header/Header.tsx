@@ -55,7 +55,7 @@ const Header = () => {
           <Link to={"/"} className="hover:text-sky-500 transition-all">
             {t(T.header.about)}
           </Link>
-          <Link to={"/"} className="hover:text-sky-500 transition-all">
+          <Link to={"/contact"} className="hover:text-sky-500 transition-all">
             {t(T.header.contact)}
           </Link>
 
@@ -178,7 +178,7 @@ const Header = () => {
                 {t(T.header.about)}
               </Link>
               <Link
-                to={"/"}
+                to={"/contact"}
                 onClick={toggleSidebar}
                 className="block w-[70%] py-2 px-4 bg-white text-sky-500 rounded-lg hover:bg-opacity-90 transition-all"
               >
