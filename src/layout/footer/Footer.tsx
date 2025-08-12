@@ -8,9 +8,9 @@ import { useTypedTranslation } from "../../translation/useTypedTranslation";
 import { useSelector } from "react-redux";
 import { RootState } from "../../redux/store/configureStore";
 import callApi from "../../services/api/apiClient";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 
-export function Footer(): JSX.Element {
+export function Footer(): React.JSX.Element {
   const { i18n, t, T } = useTypedTranslation();
 
   const siteSetting = useSelector(
@@ -43,30 +43,38 @@ export function Footer(): JSX.Element {
                     {t(T.footer.follow_us)}
                   </h3>
                   <div className="flex justify-center space-x-6">
-                    <a
-                      href="https://facebook.com"
-                      className="text-gray-400 hover:text-sky-600"
-                    >
-                      <FaFacebook size={24} />
-                    </a>
-                    <a
-                      href="https://m.me"
-                      className="text-gray-400 hover:text-sky-500"
-                    >
-                      <FaRegCommentDots size={24} />
-                    </a>
-                    <a
-                      href="https://telegram.me"
-                      className="text-gray-400 hover:text-sky-500"
-                    >
-                      <FaTelegramPlane size={24} />
-                    </a>
-                    <a
-                      href="viber://chat?number=your_viber_number"
-                      className="text-gray-400 hover:text-sky-400"
-                    >
-                      <FaViber size={24} />
-                    </a>
+                    {siteSetting?.fb_link && (
+                      <a
+                        href={siteSetting?.fb_link}
+                        className="text-gray-400 hover:text-sky-600"
+                      >
+                        <FaFacebook size={24} />
+                      </a>
+                    )}
+                    {siteSetting?.messenger_link && (
+                      <a
+                        href={siteSetting?.messenger_link}
+                        className="text-gray-400 hover:text-sky-500"
+                      >
+                        <FaRegCommentDots size={24} />
+                      </a>
+                    )}
+                    {siteSetting?.telegram_link && (
+                      <a
+                        href={siteSetting?.telegram_link}
+                        className="text-gray-400 hover:text-sky-500"
+                      >
+                        <FaTelegramPlane size={24} />
+                      </a>
+                    )}
+                    {siteSetting?.viber_link && (
+                      <a
+                        href={siteSetting?.viber_link}
+                        className="text-gray-400 hover:text-sky-400"
+                      >
+                        <FaViber size={24} />
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
@@ -106,7 +114,7 @@ export function Footer(): JSX.Element {
             <input
               type="email"
               placeholder="Enter your email"
-              className="bg-gray-800 text-white px-4 py-2 w-full rounded-lg border border-gray-700 focus:outline-none focus:border-skyblue"
+              className="bg-gray-800 text-white px-4 py-2 w-full rounded-lg border border-gray-700 focus:outline-hidden focus:border-skyblue"
             />
             <button className="w-full mt-4 py-2 px-4 bg-sky-600 text-white rounded-lg hover:bg-sky-700">
               Subscribe

@@ -4,8 +4,10 @@ import { useSelector } from "react-redux";
 import { RootState } from "./redux/store/configureStore";
 import AppLayout from "./routers";
 import LanguageSync from "./components/LanguageSync";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-export function App(): JSX.Element {
+export function App(): React.JSX.Element {
   const language = useSelector((state: RootState) => state?.languageSlice);
   const siteSetting = useSelector(
     (state: RootState) => state?.setting?.siteSetting?.data

@@ -14,7 +14,7 @@ interface DefaultLayoutProps {
 export default function DefaultLayout({
   children,
   loadingGroup,
-}: DefaultLayoutProps): JSX.Element {
+}: DefaultLayoutProps): React.JSX.Element {
 
   return (
     <div className="flex flex-col min-h-screen">

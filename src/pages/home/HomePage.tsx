@@ -8,6 +8,10 @@ import Dia1Png from "../../assets/dia1.webp";
 import Dia2Png from "../../assets/dia2.webp";
 import Dia3Png from "../../assets/dia3.webp";
 import Dia4Png from "../../assets/dia4.webp";
+import Game1 from "../../assets/game1.png"
+import Game2 from "../../assets/game2.png"
+import Game3 from "../../assets/game3.png"
+import Game4 from "../../assets/game4.png"
 // import Dia5Png from "../../assets/dia5.webp"
 import Dia6Png from "../../assets/dia6.webp";
 import { useTypedTranslation } from "../../translation/useTypedTranslation";
@@ -145,19 +149,19 @@ const HomePage = () => {
             {/* Hardcoded coming soon games */}
             {[
               {
-                img: "https://play-lh.googleusercontent.com/iP2i_f23Z6I-5hoL2okPS4SxOGhj0q61Iyb0Y1m4xdTsbnaCmrjs7xKRnL6o5R4h-Yg",
+                img: Game1,
                 title: t(T.home.games.genshin_impact),
               },
               {
-                img: "https://play-lh.googleusercontent.com/FVQXdzxDphpLdMRqIc5kG4C_Dc4AEO7-9uKHPt85v5_6Sp3J4mTV1S6P3ipLEoK6lDer",
+                img: Game2,
                 title: t(T.home.games.summoners_war),
               },
               {
-                img: "https://play-lh.googleusercontent.com/4b8E4y0776rFq9cUJTLjUnZAjRa2nd9kjGD_HH4sOYbKaEMsMPh3YCXVQ1871dBDtxIi",
+                img: Game3,
                 title: t(T.home.games.league_of_legend),
               },
               {
-                img: "https://play-lh.googleusercontent.com/8-SniYIRaeki791FyNlRggRuIjlxBpYM9k6F7q1UL75FW7IEUSWridDbrXmX5DkTokRq",
+                img: Game4,
                 title: t(T.home.games.identity_v),
               },
             ].map((game, key) => (

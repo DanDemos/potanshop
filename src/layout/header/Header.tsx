@@ -63,7 +63,7 @@ const Header = () => {
           <div className="relative">
             <button
               onClick={toggleLanguageDropdown}
-              className="focus:outline-none flex items-center"
+              className="focus:outline-hidden flex items-center"
             >
               <img
                 src={
@@ -106,7 +106,7 @@ const Header = () => {
         <div className="sm:hidden">
           <button
             onClick={toggleSidebar}
-            className="text-gray-800 focus:outline-none"
+            className="text-gray-800 focus:outline-hidden"
           >
             <svg
               className="w-6 h-6"
@@ -134,7 +134,7 @@ const Header = () => {
           {/* Close Button */}
           <button
             onClick={toggleSidebar}
-            className="absolute top-4 right-4 text-white focus:outline-none"
+            className="absolute top-4 right-4 text-white focus:outline-hidden"
           >
             <svg
               className="w-6 h-6"
@@ -166,21 +166,21 @@ const Header = () => {
               <Link
                 to={"/"}
                 onClick={toggleSidebar}
-                className="block w-[70%] py-2 px-4 bg-white text-sky-500 rounded-lg hover:bg-opacity-90 transition-all"
+                className="block w-[70%] py-2 px-4 bg-white text-sky-500 rounded-lg hover:bg-white/90 transition-all"
               >
                 {t(T.header.home)}
               </Link>
               <Link
                 to={"/"}
                 onClick={toggleSidebar}
-                className="block w-[70%] py-2 px-4 bg-white text-sky-500 rounded-lg hover:bg-opacity-90 transition-all"
+                className="block w-[70%] py-2 px-4 bg-white text-sky-500 rounded-lg hover:bg-white/90 transition-all"
               >
                 {t(T.header.about)}
               </Link>
               <Link
                 to={"/contact"}
                 onClick={toggleSidebar}
-                className="block w-[70%] py-2 px-4 bg-white text-sky-500 rounded-lg hover:bg-opacity-90 transition-all"
+                className="block w-[70%] py-2 px-4 bg-white text-sky-500 rounded-lg hover:bg-white/90 transition-all"
               >
                 {t(T.header.contact)}
               </Link>
@@ -219,7 +219,7 @@ const Header = () => {
         {isSidebarOpen && (
           <div
             onClick={toggleSidebar}
-            className="fixed inset-0 bg-black bg-opacity-50 z-[3]"
+            className="fixed inset-0 bg-black/50 z-[3]"
           />
         )}
       </div>

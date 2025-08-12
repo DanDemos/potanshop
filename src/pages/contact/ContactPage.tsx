@@ -117,7 +117,7 @@ function ContactPage() {
                 <input
                   className="block w-full bg-[#e6e6e6] font-bold text-[15px] 
                   leading-[1.5] text-[#666666] h-[50px] 
-                  pt-0 pr-[30px] pb-0 pl-[50px] outline-none border-0 
+                  pt-0 pr-[30px] pb-0 pl-[50px] outline-hidden border-0 
                 focus:text-sky-500 peer"
                   type="text"
                   name="name"
@@ -157,7 +157,7 @@ function ContactPage() {
 
               <div className="group relative w-full z-[1] mb-[10px]">
                 <input
-                  className="block w-full bg-[#e6e6e6] font-bold text-[15px] leading-[1.5] text-[#666666] h-[50px] pt-0 pr-[30px] pb-0 pl-[54px] outline-none border-0 focus:text-sky-500 peer"
+                  className="block w-full bg-[#e6e6e6] font-bold text-[15px] leading-[1.5] text-[#666666] h-[50px] pt-0 pr-[30px] pb-0 pl-[54px] outline-hidden border-0 focus:text-sky-500 peer"
                   type="text"
                   name="phone"
                   placeholder={t(T.main.phone)}
@@ -196,7 +196,7 @@ function ContactPage() {
 
               <div className="group relative w-full z-[1] mb-[10px]">
                 <textarea
-                  className="block w-full bg-[#e6e6e6] font-bold text-[15px] leading-[1.5] text-[#666666] h-[50px] min-h-[150px] py-[14px] px-[30px] outline-none border-0 focus:text-sky-500 peer"
+                  className="block w-full bg-[#e6e6e6] font-bold text-[15px] leading-[1.5] text-[#666666] h-[50px] min-h-[150px] py-[14px] px-[30px] outline-hidden border-0 focus:text-sky-500 peer"
                   name="message"
                   placeholder={t(T.main.message)}
                   {...register("message")}

@@ -36,7 +36,7 @@ const resolveClassConflicts = (defaultClasses: string, passedClasses: string) =>
 
 const Button: React.FC<ButtonProps> = ({ children, onClick, style, className, disabled }) => {
   // Default className with arbitrary values
-  const defaultClassName = 'container relative backdrop-blur-sm w-[160px] h-[60px] bg-[#4e4c57]/100 text-white shadow-[4px_4px_20px_rgba(0,0,0,0)]';
+  const defaultClassName = 'container relative backdrop-blur-xs w-[160px] h-[60px] bg-[#4e4c57]/100 text-white shadow-[4px_4px_20px_rgba(0,0,0,0)]';
 
   // If className is passed, process and resolve conflicts
   const finalClassName = className ? resolveClassConflicts(defaultClassName, className) : defaultClassName;

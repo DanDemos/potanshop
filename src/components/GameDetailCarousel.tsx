@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import Slider from "react-slick";
 import { RootState } from "../redux/store/configureStore";
 
-export function GameDetailCarousel(): JSX.Element {
+export function GameDetailCarousel(): React.JSX.Element {
   const settings = {
     dots: true,
     infinite: true,
@@ -12,12 +12,12 @@ export function GameDetailCarousel(): JSX.Element {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 4000,
-    arrows: true,
+    arrows: false,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          arrows: false,
+          arrows: true,
         },
       },
     ],

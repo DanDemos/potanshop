@@ -14,12 +14,12 @@ const settings = {
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 4000,
-  arrows: true,
+  arrows: false,
   responsive: [
     {
       breakpoint: 1024,
       settings: {
-        arrows: false,
+        arrows: true,
       },
     },
   ],
