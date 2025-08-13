@@ -57,7 +57,7 @@ const obj = {
   [loadingSlice.name]: loadingSlice.reducer,
 };
 
-const rootReducers = combineReducers(obj);
+export const rootReducers = combineReducers(obj);
 
 // Configuration for redux-persist
 const persistConfig = {

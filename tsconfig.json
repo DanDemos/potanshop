@@ -13,7 +13,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-
+    "jsxImportSource": "react",
     /* Allow JavaScript files */
     "allowJs": true,
     "checkJs": false,
@@ -26,8 +26,9 @@
     "noImplicitAny": false,
     "noImplicitReturns": false,
     "noImplicitThis": false,
-    "noUncheckedIndexedAccess": false
+    "noUncheckedIndexedAccess": false,
+    "types": ["vitest/globals", "@testing-library/jest-dom"]
   },
-  "include": ["src", "vite-env.d.ts"],
+  "include": ["src", "test", "vite-env.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 } 
