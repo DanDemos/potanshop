@@ -25,6 +25,7 @@ const settings = {
   ],
 };
 
+
 const BannerCarousel: React.FC = () => {
   const { t, T } = useTypedTranslation();
 
