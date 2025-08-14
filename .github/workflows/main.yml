@@ -33,4 +33,4 @@ jobs:
 
       - name: Deploy dist folder to server
         run: |
-          rsync -avz --delete frontend/dist/ ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:/var/www/vhosts/potanshop.com/httpdocs
+          rsync -avz --delete dist/ ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:/var/www/vhosts/potanshop.com/httpdocs
