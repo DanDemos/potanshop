@@ -29,6 +29,6 @@ jobs:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_KEY }}
-          source: "dist/*"
+          source: "dist/."
           target: "httpdocs/"
 
