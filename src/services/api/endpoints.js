@@ -1,5 +1,4 @@
 // import { res_modifiers_config } from "../../helper/res_modifiers_config";
-
 // Define the API URLs for different environments
 export const API_URLs = {
   production: import.meta.env.VITE_PRODUCTION_ENDPOINT,
