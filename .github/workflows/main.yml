@@ -1,0 +1,37 @@
+name: CI/CD
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout repo
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Install dependencies
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      # Build React project
+      - name: Build
+        run: yarn build
+
+      # Upload dist folder using scp
+      - name: Upload dist to server
+        env:
+          SERVER_KEY: ${{ secrets.SERVER_KEY }}
+          SERVER_USER: ${{ secrets.SERVER_USER }}
+          SERVER_HOST: ${{ secrets.SERVER_HOST }}
+          TARGET_DIR: /
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SERVER_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_HOST "mkdir -p $TARGET_DIR"
+          scp -o StrictHostKeyChecking=no -r dist/* $SERVER_USER@$SERVER_HOST:$TARGET_DIR
