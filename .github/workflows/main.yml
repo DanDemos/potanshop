@@ -20,7 +20,10 @@ jobs:
 
       # Build React project
       - name: Build
-        run: yarn build
+        run: yarn build --mode production
+        env:
+          VITE_PRODUCTION_ENDPOINT: ${{ secrets.VITE_PRODUCTION_ENDPOINT }}
+          VITE_DEVELOP_ENDPOINT: ${{ secrets.VITE_DEVELOP_ENDPOINT }}
 
       # Upload dist folder to server
       - name: Deploy to server via SSH
