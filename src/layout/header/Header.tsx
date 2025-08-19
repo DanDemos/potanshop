@@ -3,12 +3,12 @@ import DiamondIcon from "../../assets/DiamondIcon.png";
 import { useState } from "react";
 import { languageSlice } from "../../helper/customSlice";
 import { useSelector } from "react-redux";
-import { useTypedTranslation } from "../../translation/useTypedTranslation";
+import { useTypedTranslation } from "../../translation/useTypedTranslation.ts";
 import { RootState } from "../../redux/store/configureStore";
 import { dispatchStore } from "../../lib/dispatchStore";
 
 const Header = () => {
-  const { i18n, t, T } = useTypedTranslation();
+  const { i18n, Translate, translation } = useTypedTranslation();
   const language = useSelector((state: RootState) => state?.languageSlice);
   const siteSetting = useSelector(
     (state: RootState) => state?.setting?.siteSetting?.data
@@ -50,13 +50,13 @@ const Header = () => {
         {/* Navigation */}
         <nav className="hidden sm:flex space-x-6">
           <Link to={"/"} className="hover:text-sky-500 transition-all">
-            {t(T.header.home)}
+            {Translate(translation.header.home)}
           </Link>
           <Link to={"/"} className="hover:text-sky-500 transition-all">
-            {t(T.header.about)}
+            {Translate(translation.header.about)}
           </Link>
           <Link to={"/contact"} className="hover:text-sky-500 transition-all">
-            {t(T.header.contact)}
+            {Translate(translation.header.contact)}
           </Link>
 
           {/* Language Dropdown */}
@@ -160,7 +160,7 @@ const Header = () => {
               className="w-16 h-16 bg-white p-2 shadow-md rounded-tl-xl rounded-br-xl"
             />
             <h2 className="text-lg font-semibold">
-              {t(T.header.welcome_message)}
+              {Translate(translation.header.welcome_message)}
             </h2>
             <nav className="flex flex-col justify-center items-center w-full space-y-4 text-center">
               <Link
@@ -168,21 +168,21 @@ const Header = () => {
                 onClick={toggleSidebar}
                 className="block w-[70%] py-2 px-4 bg-white text-sky-500 rounded-lg hover:bg-white/90 transition-all"
               >
-                {t(T.header.home)}
+                {Translate(translation.header.home)}
               </Link>
               <Link
                 to={"/"}
                 onClick={toggleSidebar}
                 className="block w-[70%] py-2 px-4 bg-white text-sky-500 rounded-lg hover:bg-white/90 transition-all"
               >
-                {t(T.header.about)}
+                {Translate(translation.header.about)}
               </Link>
               <Link
                 to={"/contact"}
                 onClick={toggleSidebar}
                 className="block w-[70%] py-2 px-4 bg-white text-sky-500 rounded-lg hover:bg-white/90 transition-all"
               >
-                {t(T.header.contact)}
+                {Translate(translation.header.contact)}
               </Link>
 
               <div className="flex items-center gap-4">

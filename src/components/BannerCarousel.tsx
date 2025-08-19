@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import callApi from "../services/api/apiClient";
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store/configureStore";
-import { useTypedTranslation } from "../translation/useTypedTranslation";
+import { useTypedTranslation } from "../translation/useTypedTranslation.ts";
 
 const settings = {
   dots: true,
@@ -27,7 +27,7 @@ const settings = {
 
 
 const BannerCarousel: React.FC = () => {
-  const { t, T } = useTypedTranslation();
+  const { Translate, translation } = useTypedTranslation();
 
   const language = useSelector((state: RootState) => state?.languageSlice);
   const homeBanners = useSelector(

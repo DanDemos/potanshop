@@ -4,14 +4,14 @@ import {
   FaRegCommentDots,
   FaViber,
 } from "react-icons/fa";
-import { useTypedTranslation } from "../../translation/useTypedTranslation";
+import { useTypedTranslation } from "../../translation/useTypedTranslation.ts";
 import { useSelector } from "react-redux";
 import { RootState } from "../../redux/store/configureStore";
 import callApi from "../../services/api/apiClient";
 import React, { useEffect } from "react";
 
 export function Footer(): React.JSX.Element {
-  const { i18n, t, T } = useTypedTranslation();
+  const { i18n, Translate, translation } = useTypedTranslation();
 
   const siteSetting = useSelector(
     (state: RootState) => state?.setting?.siteSetting?.data
@@ -27,7 +27,7 @@ export function Footer(): React.JSX.Element {
             {siteSetting?.about ? (
               <div className="col-span-1">
                 <h3 className="text-lg font-semibold mb-4">
-                  {t(T.footer.about_potan)}
+                  {Translate(translation.footer.about_potan)}
                 </h3>
                 <p className="text-sm text-gray-400">{siteSetting?.about}</p>
               </div>
@@ -40,7 +40,7 @@ export function Footer(): React.JSX.Element {
               <div className="order-2 sm:order-1">
                 <div className="text-center">
                   <h3 className="text-lg font-semibold mb-4">
-                    {t(T.footer.follow_us)}
+                    {Translate(translation.footer.follow_us)}
                   </h3>
                   <div className="flex justify-center space-x-6">
                     {siteSetting?.fb_link && (
@@ -82,12 +82,12 @@ export function Footer(): React.JSX.Element {
               {/* Quick Links */}
               <div className="order-1 sm:order-2 ps-0 sm:ps-20">
                 <h3 className="text-lg font-semibold mb-4">
-                  {t(T.footer.quick_links)}
+                  {Translate(translation.footer.quick_links)}
                 </h3>
                 <ul className="text-sm text-gray-400 space-y-2">
                   <li>
                     <a href="/privacy-policy" className="hover:text-gray-300">
-                      {t(T.footer.privacy_policy)}
+                      {Translate(translation.footer.privacy_policy)}
                     </a>
                   </li>
                   <li>
@@ -95,12 +95,12 @@ export function Footer(): React.JSX.Element {
                       href="/terms-and-conditions"
                       className="hover:text-gray-300"
                     >
-                      {t(T.footer.terms_and_conditions)}
+                      {Translate(translation.footer.terms_and_conditions)}
                     </a>
                   </li>
                   <li>
                     <a href="/contact" className="hover:text-gray-300">
-                      {t(T.footer.contact_us)}
+                      {Translate(translation.footer.contact_us)}
                     </a>
                   </li>
                 </ul>

@@ -1,15 +1,12 @@
 import { useTranslation } from 'react-i18next';
 import enTranslations from './en.json';
 
-// Auto-generate types from the English translation file
+// Auto-generate dot-notation string keys from the English translation file
 type NestedKeyOf<T> = {
   [K in keyof T]: T[K] extends object
     ? `${K & string}.${NestedKeyOf<T[K]> & string}`
     : K;
 }[keyof T];
-
-// Create a type from the JSON structure
-type TranslationKeys = typeof enTranslations;
 
 // Generate keys object with proper typing
 const generateTypedKeys = <T extends Record<string, any>>(
@@ -31,11 +28,11 @@ const generateTypedKeys = <T extends Record<string, any>>(
 };
 
 // Generate typed keys object
-export const T = generateTypedKeys(enTranslations);
+export const translation = generateTypedKeys(enTranslations);
 
 // Custom hook that provides typed access
 export const useTypedTranslation = () => {
-  const { t, i18n } = useTranslation();
+  const { t:Translate, i18n } = useTranslation();
   
-  return { t, i18n, T };
+  return { Translate, i18n, translation };
 }; 

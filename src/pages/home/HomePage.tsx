@@ -14,7 +14,7 @@ import Game3 from "../../assets/game3.png"
 import Game4 from "../../assets/game4.png"
 // import Dia5Png from "../../assets/dia5.webp"
 import Dia6Png from "../../assets/dia6.webp";
-import { useTypedTranslation } from "../../translation/useTypedTranslation";
+import { useTypedTranslation } from "../../translation/useTypedTranslation.ts";
 import { RootState } from "../../redux/store/configureStore";
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
@@ -74,7 +74,7 @@ const DelayedSlider = ({
 };
 
 const HomePage = () => {
-  const { t, T } = useTypedTranslation();
+  const { Translate, translation } = useTypedTranslation();
   const location = useLocation();
 
   const language = useSelector((state: RootState) => state?.languageSlice);
@@ -100,7 +100,7 @@ const HomePage = () => {
         <div className="max-w-6xl flex flex-col items-center mx-auto text-center">
           <h2 className="flex items-center text-xl font-semibold mb-3">
             <img className="w-7 h-6 me-1" src={FirePng} alt="" />
-            {t(T.home.hot_games)}
+            {Translate(translation.home.hot_games)}
           </h2>
           <div className="max-w-4xl grid grid-cols-3 sm:grid-cols-5 sm:gap-5 gap-3 select-none">
             {/* Hot Game Item */}
@@ -141,7 +141,7 @@ const HomePage = () => {
                     onClick={undefined}
                     disabled={false}
                   >
-                    {t(T.home.top_up)}
+                    {Translate(translation.home.top_up)}
                   </Button>
                 </Link>
               );
@@ -150,19 +150,19 @@ const HomePage = () => {
             {[
               {
                 img: Game1,
-                title: t(T.home.games.genshin_impact),
+                title: Translate(translation.home.games.genshin_impact),
               },
               {
                 img: Game2,
-                title: t(T.home.games.summoners_war),
+                title: Translate(translation.home.games.summoners_war),
               },
               {
                 img: Game3,
-                title: t(T.home.games.league_of_legend),
+                title: Translate(translation.home.games.league_of_legend),
               },
               {
                 img: Game4,
-                title: t(T.home.games.identity_v),
+                title: Translate(translation.home.games.identity_v),
               },
             ].map((game, key) => (
               <Link
@@ -173,8 +173,8 @@ const HomePage = () => {
                   e.preventDefault();
                   toast.warn(
                     <ToastComponent
-                      title={t(T.home.coming_soon)}
-                      description={t(T.home.under_construction)}
+                      title={Translate(translation.home.coming_soon)}
+                      description={Translate(translation.home.under_construction)}
                     />
                   );
                 }}
@@ -194,14 +194,14 @@ const HomePage = () => {
                   onClick={() => {
                     toast.warn(
                       <ToastComponent
-                        title={t(T.home.coming_soon)}
-                        description={t(T.home.under_construction)}
+                        title={Translate(translation.home.coming_soon)}
+                        description={Translate(translation.home.under_construction)}
                       />
                     );
                   }}
                   disabled
                 >
-                  {t(T.home.top_up)}
+                  {Translate(translation.home.top_up)}
                 </Button>
               </Link>
             ))}
@@ -214,39 +214,39 @@ const HomePage = () => {
         <div className="max-w-6xl flex flex-col items-center mx-auto text-center">
           <h2 className="flex items-center text-xl font-semibold mb-3">
             <img className="w-7 h-6 me-1" src={FirePng} alt="" />
-            {t(T.home.hot_products)}
+            {Translate(translation.home.hot_products)}
           </h2>
           <div className="max-w-4xl grid grid-cols-3 sm:grid-cols-6 sm:gap-5 gap-2 select-none">
             {/* Hot Product Item - hardcoded array */}
             {[
               {
                 img: Dia0Png,
-                title: t(T.home.products.twilight_pass),
+                title: Translate(translation.home.products.twilight_pass),
                 price: "$8.99",
               },
               {
                 img: Dia6Png,
-                title: t(T.home.products.weekly_diamond_pass),
+                title: Translate(translation.home.products.weekly_diamond_pass),
                 price: "$1.89",
               },
               {
                 img: Dia1Png,
-                title: t(T.home.products.diamonds_56),
+                title: Translate(translation.home.products.diamonds_56),
                 price: "$0.89",
               },
               {
                 img: Dia2Png,
-                title: t(T.home.products.diamonds_112),
+                title: Translate(translation.home.products.diamonds_112),
                 price: "$1.77",
               },
               {
                 img: Dia3Png,
-                title: t(T.home.products.diamonds_168),
+                title: Translate(translation.home.products.diamonds_168),
                 price: "$2.65",
               },
               {
                 img: Dia4Png,
-                title: t(T.home.products.diamonds_224),
+                title: Translate(translation.home.products.diamonds_224),
                 price: "$3.54",
               },
             ].map((product, key) => (
@@ -275,7 +275,7 @@ const HomePage = () => {
                   className="group w-full h-[30px] mx-auto"
                   onClick={() => null}
                 >
-                  {t(T.home.buy_now)}
+                  {Translate(translation.home.buy_now)}
                 </Button>
               </div>
             ))}
@@ -287,9 +287,9 @@ const HomePage = () => {
       <section className="px-3 py-5 sm:px-0">
         <div className="max-w-6xl mx-auto text-center">
           <div className="flex justify-between">
-            <h2 className="text-2xl font-bold mb-3">{t(T.home.game_list)}</h2>
+            <h2 className="text-2xl font-bold mb-3">{Translate(translation.home.game_list)}</h2>
             {/* <Button className="w-[110px] h-[33px]" onClick={() => null}>
-              {t(T.home.see_all)}
+              {Translate(translation.home.see_all)}
             </Button> */}
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 select-none">

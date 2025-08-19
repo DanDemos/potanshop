@@ -8,7 +8,7 @@ import BenefitsComponent from "../../src/components/BenefitsComponent";
 import { rootReducers } from "../../src/redux/store/configureStore";
 
 // Mock the translation hook to just return the key
-vi.mock("../../src/translation/useTypedTranslation", () => ({
+vi.mock("../../src/translation/useTypedTranslation.ts", () => ({
   useTypedTranslation: () => ({
     t: (key: string) => key,
     T: {

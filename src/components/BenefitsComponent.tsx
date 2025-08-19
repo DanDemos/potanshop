@@ -1,9 +1,9 @@
 import { useSelector } from "react-redux";
-import { useTypedTranslation } from "../translation/useTypedTranslation";
+import { useTypedTranslation } from "../translation/useTypedTranslation.ts";
 import { RootState } from "../redux/store/configureStore";
 
 export function BenefitsComponent() {
-  const { t, T } = useTypedTranslation();
+  const { Translate, translation } = useTypedTranslation();
 
   const siteSetting = useSelector(
     (state: RootState) => state?.setting?.siteSetting?.data
@@ -13,13 +13,13 @@ export function BenefitsComponent() {
     <section className="bg-gray-100 px-5 py-16">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl font-bold mb-10">
-          {t(T.home.why_shop_with_us)}
+          {Translate(translation.home.why_shop_with_us)}
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-12">
           {siteSetting?.free_shipping ? (
             <div className="text-left">
               <h3 className="text-xl font-semibold mb-4">
-                {t(T.home.free_shipping)}
+                {Translate(translation.home.free_shipping)}
               </h3>
               <p>{siteSetting?.free_shipping}</p>
             </div>
@@ -30,7 +30,7 @@ export function BenefitsComponent() {
           {siteSetting?.quality_guarantee ? (
             <div className="text-left">
               <h3 className="text-xl font-semibold mb-4">
-                {t(T.home.quality_guarantee)}
+                {Translate(translation.home.quality_guarantee)}
               </h3>
               <p>{siteSetting?.quality_guarantee}</p>
             </div>
@@ -41,7 +41,7 @@ export function BenefitsComponent() {
           {siteSetting?.customer_support ? (
             <div className="text-left">
               <h3 className="text-xl font-semibold mb-4">
-                {t(T.home.quality_guarantee)}
+                {Translate(translation.home.quality_guarantee)}
               </h3>
               <p>{siteSetting?.customer_support}</p>
             </div>

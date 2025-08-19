@@ -1,6 +1,6 @@
 import ContactImg from "../../assets/contact-img.png";
 import DefaultLayout from "../../layout/DefaultLayout";
-import { useTypedTranslation } from "../../translation/useTypedTranslation";
+import { useTypedTranslation } from "../../translation/useTypedTranslation.ts";
 import callApi from "../../services/api/apiClient";
 import { useSearchParams } from "react-router-dom";
 import BenefitsComponent from "../../components/BenefitsComponent";
@@ -34,7 +34,7 @@ const defaultOptions = {
 };
 
 function ContactPage() {
-  const { t, T } = useTypedTranslation();
+  const { Translate, translation } = useTypedTranslation();
   const {
     register,
     handleSubmit,
@@ -55,9 +55,9 @@ function ContactPage() {
         } else {
           toast.error(
             <ToastComponent
-              title={t(T.main.error)}
+              title={Translate(translation.main.error)}
               description={
-                res?.message ? res?.message : t(T.main.unexpected_error)
+                res?.message ? res?.message : Translate(translation.main.unexpected_error)
               }
             />
           );
@@ -66,11 +66,11 @@ function ContactPage() {
       .catch((err) => {
         toast.error(
           <ToastComponent
-            title={t(T.main.error)}
+            title={Translate(translation.main.error)}
             description={
               typeof err?.message === "string"
                 ? err?.message
-                : t(T.main.unexpected_error)
+                : Translate(translation.main.unexpected_error)
             }
           />
         );
@@ -110,7 +110,7 @@ function ContactPage() {
                 className="block font-[Montserrat-ExtraBold] 
                 text-[24px] text-[#333333] leading-[1.2] text-left pb-[36px]"
               >
-                {t(T.contact.get_in_touch)}
+                {Translate(translation.contact.get_in_touch)}
               </span>
 
               <div className="group relative w-full z-[1] mb-[10px]">
@@ -121,7 +121,7 @@ function ContactPage() {
                 focus:text-sky-500 peer"
                   type="text"
                   name="name"
-                  placeholder={t(T.main.name)}
+                  placeholder={Translate(translation.main.name)}
                   {...register("name")}
                 />
                 <span className="block absolute bottom-0 left-0 w-full h-full text-sky-500 pl-[22px] peer-focus:animate-anim-shadow -z-[1]"></span>
@@ -160,7 +160,7 @@ function ContactPage() {
                   className="block w-full bg-[#e6e6e6] font-bold text-[15px] leading-[1.5] text-[#666666] h-[50px] pt-0 pr-[30px] pb-0 pl-[54px] outline-hidden border-0 focus:text-sky-500 peer"
                   type="text"
                   name="phone"
-                  placeholder={t(T.main.phone)}
+                  placeholder={Translate(translation.main.phone)}
                   {...register("phone")}
                 />
                 <span className="block absolute bottom-0 left-0 w-full h-full text-sky-500 pl-[22px] peer-focus:animate-anim-shadow -z-[1]"></span>
@@ -198,7 +198,7 @@ function ContactPage() {
                 <textarea
                   className="block w-full bg-[#e6e6e6] font-bold text-[15px] leading-[1.5] text-[#666666] h-[50px] min-h-[150px] py-[14px] px-[30px] outline-hidden border-0 focus:text-sky-500 peer"
                   name="message"
-                  placeholder={t(T.main.message)}
+                  placeholder={Translate(translation.main.message)}
                   {...register("message")}
                 ></textarea>
                 <span className="block absolute bottom-0 left-0 w-full h-full text-sky-500 pl-[22px] peer-focus:animate-anim-shadow -z-[1]"></span>
@@ -225,7 +225,7 @@ function ContactPage() {
               </div>
 
                 <Button className="w-full">
-                  {t(T.contact.send)}
+                  {Translate(translation.contact.send)}
                 </Button>
             </form>
           </div>
