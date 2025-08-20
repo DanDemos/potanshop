@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import { useTypedTranslation } from "../translation/useTypedTranslation.ts";
 import { RootState } from "../redux/store/configureStore";
 
-export function BenefitsComponent() {
+export function BenefitsComponent(): React.JSX.Element {
   const { Translate, translation } = useTypedTranslation();
 
   const siteSetting = useSelector(
@@ -53,5 +53,3 @@ export function BenefitsComponent() {
     </section>
   );
 }
-
-export default BenefitsComponent;

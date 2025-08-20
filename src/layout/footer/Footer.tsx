@@ -10,7 +10,7 @@ import { RootState } from "../../redux/store/configureStore";
 import callApi from "../../services/api/apiClient";
 import React, { useEffect } from "react";
 
-export function Footer(): React.JSX.Element {
+export default function Footer(): React.JSX.Element {
   const { i18n, Translate, translation } = useTypedTranslation();
 
   const siteSetting = useSelector(
@@ -133,5 +133,3 @@ export function Footer(): React.JSX.Element {
     return <></>;
   }
 }
-
-export default Footer;

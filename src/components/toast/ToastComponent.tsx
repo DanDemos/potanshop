@@ -5,7 +5,7 @@ interface ToastComponentProps {
   description: string;
 }
 
-function ToastComponent({
+export default function ToastComponent({
   title,
   description,
 }: ToastComponentProps): React.ReactNode {
@@ -16,5 +16,3 @@ function ToastComponent({
     </div>
   );
 }
-
-export default ToastComponent;

@@ -8,7 +8,7 @@ import { dispatchStore } from "../../lib/dispatchStore";
 import { selectStore } from "../../lib/selectStore";
 import callAxios from "./axios";
 
-const callApi = (apiName) => {
+export default function callApi(apiName) {
   let uniqueAPI_id = null;
   const [apiGroup, endpointKey] = apiName.split("/");
 
@@ -158,5 +158,3 @@ const callApi = (apiName) => {
 
   return apiCall;
 };
-
-export default callApi;

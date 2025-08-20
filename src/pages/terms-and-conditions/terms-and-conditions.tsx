@@ -14,10 +14,9 @@ import { useSelector } from "react-redux";
 import { useEffect } from "react";
 import callApi from "../../services/api/apiClient";
 import { useSearchParams } from "react-router-dom";
-import { BenefitsComponent } from "../../components/BenefitsComponent";
 import { RootState } from "../../redux/store/configureStore";
 
-export default function GameDetailPage() {
+export default function TermsAndConditionsPage() {
   const { Translate, translation } = useTypedTranslation();
   const [searchParams] = useSearchParams();
   const gameSlug = searchParams.get("id");
@@ -96,7 +95,7 @@ export default function GameDetailPage() {
       </section>
 
       {/* Benefits Section */}
-      <BenefitsComponent />
+      {/* <BenefitsComponent /> */}
     </DefaultLayout>
   );
 }

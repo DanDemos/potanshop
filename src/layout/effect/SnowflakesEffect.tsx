@@ -1,6 +1,7 @@
 import { useEffect } from "react";
-import SnowFlakePNG from "../../assets/snowflake.png"
-const SnowflakesEffect = (): null => {
+import SnowFlakePNG from "../../assets/snowflake.png";
+
+export default function SnowflakesEffect(): null {
   useEffect(() => {
     const snowflakesContainer = document.createElement("div");
     snowflakesContainer.classList.add(
@@ -17,7 +18,7 @@ const SnowflakesEffect = (): null => {
     const interval = 50; // Time interval in ms to limit snowflakes frequency (larger = less frequent)
 
     // Function to create snowflakes
-    const createSnowflake = (x:number, y:number) => {
+    const createSnowflake = (x: number, y: number) => {
       const random = Math.random() * 3 + 1;
       const snowflake = document.createElement("div");
       snowflake.classList.add("snowflake", "absolute", "opacity-80");
@@ -61,6 +62,4 @@ const SnowflakesEffect = (): null => {
   }, []);
 
   return null;
-};
-
-export default SnowflakesEffect;
+}

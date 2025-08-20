@@ -7,7 +7,7 @@ import LanguageSync from "./components/LanguageSync";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-export function App(): React.JSX.Element {
+export default function App(): React.JSX.Element {
   const language = useSelector((state: RootState) => state?.languageSlice);
   const siteSetting = useSelector(
     (state: RootState) => state?.setting?.siteSetting?.data
@@ -39,5 +39,3 @@ export function App(): React.JSX.Element {
     </>
   );
 }
-
-export default App;

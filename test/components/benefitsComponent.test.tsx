@@ -4,7 +4,7 @@ import { render, screen } from "@testing-library/react";
 import { Provider } from "react-redux";
 import { configureStore } from "@reduxjs/toolkit";
 
-import BenefitsComponent from "../../src/components/BenefitsComponent";
+import { BenefitsComponent } from "../../src/components/BenefitsComponent";
 import { rootReducers } from "../../src/redux/store/configureStore";
 
 // Mock the translation hook to just return the key
@@ -52,7 +52,6 @@ describe("BenefitsComponent", () => {
         <BenefitsComponent />
       </Provider>
     );
-
   });
 
   it("does not render sections when data missing", () => {
@@ -69,6 +68,5 @@ describe("BenefitsComponent", () => {
         <BenefitsComponent />
       </Provider>
     );
-
   });
 });

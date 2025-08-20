@@ -9,7 +9,7 @@ interface LoadingComponentProps {
   type?: "remount" | "hide";
 }
 
-function LoadingComponent({
+export default function LoadingComponent({
   loadingGroup,
   loadingDesign,
   children,
@@ -22,7 +22,7 @@ function LoadingComponent({
   // useEffect(() => {
   //   console.log(`Loading:${isLoading === undefined ? false : true}`, loadingGroup);
   // }, [isLoading])
-  
+
   if (type === "remount") {
     return isLoading === undefined
       ? children
@@ -44,5 +44,3 @@ function LoadingComponent({
     return <></>;
   }
 }
-
-export default LoadingComponent;

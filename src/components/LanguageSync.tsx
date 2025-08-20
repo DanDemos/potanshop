@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
 import type { RootState } from "../redux/store/configureStore";
 
-function LanguageSync(): null {
+export default function LanguageSync(): null {
   const language = useSelector((state: RootState) => state.languageSlice);
   const { i18n } = useTranslation();
 
@@ -15,5 +15,3 @@ function LanguageSync(): null {
 
   return null;
 }
-
-export default LanguageSync;

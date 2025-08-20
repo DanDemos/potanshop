@@ -10,8 +10,8 @@ import { FindAccessToken, token_endpoint } from "../../helper/setAccessToken";
 import trueTypeOf from "../../lib/trueTypeOf";
 import callAxios from "../../services/api/axios";
 
-export const createApiThunk = (thunkName, payload, loadingData) =>
-  createAsyncThunk(`${thunkName}`, async (data, thunkAPI) => {
+export function createApiThunk(thunkName, payload, loadingData) {
+  return createAsyncThunk(`${thunkName}`, async (data, thunkAPI) => {
     const { endpoint } = payload;
     thunkAPI.dispatch(loadingSlice.actions.setLoading(loadingData));
 
@@ -41,6 +41,7 @@ export const createApiThunk = (thunkName, payload, loadingData) =>
       thunkAPI.dispatch(loadingSlice.actions.setLoading(loadingData));
     }
   });
+}
 
 export const slice = {};
 

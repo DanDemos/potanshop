@@ -3,7 +3,7 @@ import DefaultLayout from "../../layout/DefaultLayout";
 import { useTypedTranslation } from "../../translation/useTypedTranslation.ts";
 import callApi from "../../services/api/apiClient";
 import { useSearchParams } from "react-router-dom";
-import BenefitsComponent from "../../components/BenefitsComponent";
+import { BenefitsComponent } from "../../components/BenefitsComponent";
 import { RootState } from "../../redux/store/configureStore";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -33,7 +33,7 @@ const defaultOptions = {
   easing: "cubic-bezier(0.03, 0.98, 0.52, 0.99)", // Easing on enter/exit.
 };
 
-function ContactPage() {
+export default function ContactPage(): React.JSX.Element {
   const { Translate, translation } = useTypedTranslation();
   const {
     register,
@@ -57,7 +57,9 @@ function ContactPage() {
             <ToastComponent
               title={Translate(translation.main.error)}
               description={
-                res?.message ? res?.message : Translate(translation.main.unexpected_error)
+                res?.message
+                  ? res?.message
+                  : Translate(translation.main.unexpected_error)
               }
             />
           );
@@ -224,9 +226,9 @@ function ContactPage() {
                 )}
               </div>
 
-                <Button className="w-full">
-                  {Translate(translation.contact.send)}
-                </Button>
+              <Button className="w-full">
+                {Translate(translation.contact.send)}
+              </Button>
             </form>
           </div>
         </div>
@@ -237,5 +239,3 @@ function ContactPage() {
     </DefaultLayout>
   );
 }
-
-export default ContactPage;

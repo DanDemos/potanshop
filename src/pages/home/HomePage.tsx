@@ -8,10 +8,10 @@ import Dia1Png from "../../assets/dia1.webp";
 import Dia2Png from "../../assets/dia2.webp";
 import Dia3Png from "../../assets/dia3.webp";
 import Dia4Png from "../../assets/dia4.webp";
-import Game1 from "../../assets/game1.png"
-import Game2 from "../../assets/game2.png"
-import Game3 from "../../assets/game3.png"
-import Game4 from "../../assets/game4.png"
+import Game1 from "../../assets/game1.png";
+import Game2 from "../../assets/game2.png";
+import Game3 from "../../assets/game3.png";
+import Game4 from "../../assets/game4.png";
 // import Dia5Png from "../../assets/dia5.webp"
 import Dia6Png from "../../assets/dia6.webp";
 import { useTypedTranslation } from "../../translation/useTypedTranslation.ts";
@@ -21,7 +21,7 @@ import { useEffect, useState } from "react";
 import callApi from "../../services/api/apiClient";
 import Slider from "react-slick";
 import DefaultLayout from "../../layout/DefaultLayout";
-import BenefitsComponent from "../../components/BenefitsComponent";
+import { BenefitsComponent } from "../../components/BenefitsComponent";
 import ToastComponent from "../../components/toast/ToastComponent";
 
 const settings = {
@@ -73,14 +73,12 @@ const DelayedSlider = ({
   return placeholder;
 };
 
-const HomePage = () => {
+export default function HomePage(): React.JSX.Element {
   const { Translate, translation } = useTypedTranslation();
   const location = useLocation();
 
   const language = useSelector((state: RootState) => state?.languageSlice);
-  const gameList = useSelector(
-    (state: RootState) => state?.game?.list?.data
-  );
+  const gameList = useSelector((state: RootState) => state?.game?.list?.data);
   useEffect(() => {
     (async () => {
       await callApi("game/list")
@@ -174,7 +172,9 @@ const HomePage = () => {
                   toast.warn(
                     <ToastComponent
                       title={Translate(translation.home.coming_soon)}
-                      description={Translate(translation.home.under_construction)}
+                      description={Translate(
+                        translation.home.under_construction
+                      )}
                     />
                   );
                 }}
@@ -195,7 +195,9 @@ const HomePage = () => {
                     toast.warn(
                       <ToastComponent
                         title={Translate(translation.home.coming_soon)}
-                        description={Translate(translation.home.under_construction)}
+                        description={Translate(
+                          translation.home.under_construction
+                        )}
                       />
                     );
                   }}
@@ -287,7 +289,9 @@ const HomePage = () => {
       <section className="px-3 py-5 sm:px-0">
         <div className="max-w-6xl mx-auto text-center">
           <div className="flex justify-between">
-            <h2 className="text-2xl font-bold mb-3">{Translate(translation.home.game_list)}</h2>
+            <h2 className="text-2xl font-bold mb-3">
+              {Translate(translation.home.game_list)}
+            </h2>
             {/* <Button className="w-[110px] h-[33px]" onClick={() => null}>
               {Translate(translation.home.see_all)}
             </Button> */}
@@ -340,6 +344,4 @@ const HomePage = () => {
       <BenefitsComponent />
     </DefaultLayout>
   );
-};
-
-export default HomePage;
+}

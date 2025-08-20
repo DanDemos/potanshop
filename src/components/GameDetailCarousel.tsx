@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import Slider from "react-slick";
 import { RootState } from "../redux/store/configureStore";
 
-export function GameDetailCarousel(): React.JSX.Element {
+export default function GameDetailCarousel(): React.JSX.Element {
   const settings = {
     dots: true,
     infinite: true,
@@ -24,7 +24,7 @@ export function GameDetailCarousel(): React.JSX.Element {
   };
 
   const gameDetail = useSelector(
-    (state: RootState) => state?.home?.gameDetail?.data
+    (state: RootState) => state?.game?.detail?.data
   );
 
   return (
@@ -127,5 +127,3 @@ export function GameDetailCarousel(): React.JSX.Element {
     </div>
   );
 }
-
-export default GameDetailCarousel;

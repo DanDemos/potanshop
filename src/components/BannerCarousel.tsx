@@ -25,8 +25,7 @@ const settings = {
   ],
 };
 
-
-const BannerCarousel: React.FC = () => {
+export default function BannerCarousel(): React.JSX.Element {
   const { Translate, translation } = useTypedTranslation();
 
   const language = useSelector((state: RootState) => state?.languageSlice);
@@ -63,6 +62,4 @@ const BannerCarousel: React.FC = () => {
       ))}
     </Slider>
   );
-};
-
-export default BannerCarousel;
+}

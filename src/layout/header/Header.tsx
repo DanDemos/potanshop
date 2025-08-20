@@ -7,7 +7,7 @@ import { useTypedTranslation } from "../../translation/useTypedTranslation.ts";
 import { RootState } from "../../redux/store/configureStore";
 import { dispatchStore } from "../../lib/dispatchStore";
 
-const Header = () => {
+export default function Header(): React.JSX.Element {
   const { i18n, Translate, translation } = useTypedTranslation();
   const language = useSelector((state: RootState) => state?.languageSlice);
   const siteSetting = useSelector(
@@ -225,6 +225,4 @@ const Header = () => {
       </div>
     </header>
   );
-};
-
-export default Header;
+}

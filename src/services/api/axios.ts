@@ -12,7 +12,7 @@ interface Config {
 // Determine the base URL based on the current environment
 const baseUrl =
   API_URLs[
-  window.location.hostname === "localhost" ? "development" : "production"
+    window.location.hostname === "localhost" ? "development" : "production"
   ];
 
 function splitStringWithParams(inputString) {
@@ -23,7 +23,7 @@ function splitStringWithParams(inputString) {
 }
 
 // Function to make the API call using Axios
-const callAxios = async (payload) => {
+export default async function callAxios(payload) {
   // Create a config object with the URL and method
   const config: Config = {
     method: payload.endpoint.method,
@@ -35,20 +35,23 @@ const callAxios = async (payload) => {
   }
 
   try {
-    if ((/(\{:[a-zA-Z]+\})/g).test(config.url)) {
+    if (/(\{:[a-zA-Z]+\})/g.test(config.url)) {
       if (payload.keyparameter) {
         try {
-          config.url = replacePlaceholders(splitStringWithParams(config.url), payload?.keyparameter).join('')
+          config.url = replacePlaceholders(
+            splitStringWithParams(config.url),
+            payload?.keyparameter
+          ).join("");
         } catch (error) {
           console.error(error.message);
         }
-      }
-      else {
-        throw new Error(`Invalid API call: You are using a KeyParameter in ${config.url}, but the withKeyParameter chain function is not used when calling callApi().`);
+      } else {
+        throw new Error(
+          `Invalid API call: You are using a KeyParameter in ${config.url}, but the withKeyParameter chain function is not used when calling callApi().`
+        );
       }
     }
-  }
-  catch (error) {
+  } catch (error) {
     console.error(error.message);
   }
 
@@ -76,7 +79,7 @@ const callAxios = async (payload) => {
         // The request was made and the server responded with a status code
         // console.log(error.response.status);
         // console.log(error.response.data);
-        return error.response.data
+        return error.response.data;
       } else if (error.request) {
         // The request was made but no response was received
         // console.log(error.request);
@@ -90,26 +93,30 @@ const callAxios = async (payload) => {
 
   function replacePlaceholders(splitArr, obj) {
     try {
-      const replacedArr = splitArr.map(item => {
+      const replacedArr = splitArr.map((item) => {
         const match = item.match(/\{:(\w+)\}/); // Use regex to extract the key from {:key}
         if (match) {
           const key = match[1];
           if (!Object.prototype.hasOwnProperty.call(obj, key)) {
-            throw new Error(`${key} is missing when calling api ${baseUrl}/${payload.endpoint.endpoint}`);
-          }
-          else if (obj[key] == undefined || obj[key] == null || obj[key] == "") {
-            throw new Error(`Value of ${key} is ${obj?.key} when calling api ${baseUrl}/${payload.endpoint.endpoint}`);
+            throw new Error(
+              `${key} is missing when calling api ${baseUrl}/${payload.endpoint.endpoint}`
+            );
+          } else if (
+            obj[key] == undefined ||
+            obj[key] == null ||
+            obj[key] == ""
+          ) {
+            throw new Error(
+              `Value of ${key} is ${obj?.key} when calling api ${baseUrl}/${payload.endpoint.endpoint}`
+            );
           }
           return obj[key];
         }
         return item;
       });
       return replacedArr;
-    }
-    catch (error) {
+    } catch (error) {
       console.error(error);
     }
   }
-};
-
-export default callAxios;
+}

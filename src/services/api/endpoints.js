@@ -40,9 +40,19 @@ export const endpoints = Object.freeze({
     },
   },
   contact: {
-    submit:{
+    submit: {
       method: "post",
       endpoint: "contact"
+    }
+  },
+  others: {
+    privacyPolicies: {
+      method: "get",
+      endpoint: "privacy-policies"
+    },
+    termsAndConditions: {
+      method: "get",
+      endpoint: "terms-and-conditions"
     }
   }
 });
