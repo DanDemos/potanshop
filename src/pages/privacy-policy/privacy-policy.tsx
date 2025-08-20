@@ -17,15 +17,15 @@ import { useSearchParams } from "react-router-dom";
 import { RootState } from "../../redux/store/configureStore";
 import { BenefitsComponent } from "../../components/BenefitsComponent";
 
-export default function TermsAndConditionsPage() {
+export default function PrivacyPolicyPage() {
   const { Translate, translation } = useTypedTranslation();
 
   const language = useSelector((state: RootState) => state.languageSlice);
-  const termsAndConditions = useSelector(
-    (state: RootState) => state?.others?.termsAndConditions?.data
+  const privacyPolicy = useSelector(
+    (state: RootState) => state?.others?.privacyPolicy?.data
   );
   useEffect(() => {
-    callApi("others/termsAndConditions")
+    callApi("others/privacyPolicy")
       .withHeaders({ "Accept-Language": language })
       .loadingGroup("homeLoading")
       .executeDispatch();
@@ -41,20 +41,20 @@ export default function TermsAndConditionsPage() {
           </h2>
           <h2 className="flex items-center text-xl font-semibold text-gray-500 mb-3">
             {Translate(translation.main.last_update)}
-            {termsAndConditions?.updated_at}
+            {privacyPolicy?.updated_at}
           </h2>
         </div>
 
         <div className="flex justify-center">
           <div className="max-w-4xl ">
             <h2 className="flex items-center text-xl font-semibold mb-3">
-              {termsAndConditions?.title}
+              {privacyPolicy?.title}
             </h2>
             <h3 className="flex items-center text-lg mb-3">
-              {termsAndConditions?.short_description}
+              {privacyPolicy?.short_description}
             </h3>
             <p className="flex items-center text-md mb-3">
-              {termsAndConditions?.description}
+              {privacyPolicy?.description}
             </p>
           </div>
         </div>

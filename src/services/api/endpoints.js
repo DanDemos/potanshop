@@ -46,7 +46,7 @@ export const endpoints = Object.freeze({
     }
   },
   others: {
-    privacyPolicies: {
+    privacyPolicy: {
       method: "get",
       endpoint: "privacy-policies"
     },

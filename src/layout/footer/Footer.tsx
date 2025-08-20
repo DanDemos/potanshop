@@ -87,7 +87,7 @@ export default function Footer(): React.JSX.Element {
                 <ul className="text-sm text-gray-400 space-y-2">
                   <li>
                     <a href="/privacy-policy" className="hover:text-gray-300">
-                      {Translate(translation.footer.privacy_policy)}
+                      {Translate(translation.main.privacy_policy)}
                     </a>
                   </li>
                   <li>
@@ -95,7 +95,7 @@ export default function Footer(): React.JSX.Element {
                       href="/terms-and-conditions"
                       className="hover:text-gray-300"
                     >
-                      {Translate(translation.footer.terms_and_conditions)}
+                      {Translate(translation.main.terms_and_conditions)}
                     </a>
                   </li>
                   <li>

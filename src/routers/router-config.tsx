@@ -3,6 +3,8 @@ import LoginPage from "../pages/auth/LoginPage";
 import HomePage from "../pages/home/HomePage";
 import GameDetailPage from "../pages/gamedetail/GameDetailPage";
 import ContactPage from "../pages/contact/ContactPage";
+import TermsAndConditionsPage from "../pages/terms-and-conditions/terms-and-conditions";
+import PrivacyPolicyPage from "../pages/privacy-policy/privacy-policy";
 
 interface IRouteConfig {
   path: string;
@@ -27,5 +29,13 @@ export const RouteConfig: IRouteConfig[] = [
   {
     path: "/contact",
     element: <ContactPage />
+  },
+  {
+    path: "/terms-and-conditions",
+    element: <TermsAndConditionsPage />
+  },
+  {
+    path: "/privacy-policy",
+    element: <PrivacyPolicyPage />
   }
 ];

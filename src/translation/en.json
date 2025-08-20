@@ -56,7 +56,10 @@
     "name": "Name",
     "phone": "Phone",
     "email": "Email",
-    "message": "Message"
+    "message": "Message",
+    "privacy_policy": "Privacy Policy",
+    "terms_and_conditions": "Terms and Conditions",
+    "last_update": "Last updated: "
   },
   "contact":{
     "get_in_touch": "Get in touch",
@@ -67,8 +70,6 @@
     "potan_description": "PotanShop is your one-stop online store for in-game currency and accessories. Enjoy fast and secure transactions, reliable customer support, and a wide selection of games.",
     "follow_us": "Follow Us",
     "quick_links": "Quick Links",
-    "privacy_policy": "Privacy Policy",
-    "terms_and_conditions": "Terms and Conditions",
     "contact_us": "Contact Us",
     "about_potan": "About PotanShop"
   }
